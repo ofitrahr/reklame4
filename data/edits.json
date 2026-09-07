@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-07T14:38:17.846Z",
+ "updated": "2026-09-07T14:45:29.819Z",
  "reklame": {
   "ANL-LBJ-BUN-SIM-001": {
    "op": "delete",
@@ -104,6 +104,22 @@
    "geom": [
     104.01814357,
     1.1307725
+   ]
+  },
+  "ANL-BTK-YSU-KOR-001": {
+   "op": "update",
+   "props": {
+    "LONG": 104.01836889,
+    "LAT": 1.13095832,
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Bersinyal",
+    "JML_POV": 3
+   },
+   "by": "anonim",
+   "at": "2026-09-07T14:42:52.926Z",
+   "geom": [
+    104.01836889,
+    1.13095832
    ]
   }
  },
@@ -395,6 +411,93 @@
    },
    "by": "Fitrah Ramadhan",
    "at": "2026-09-07T14:23:50.922Z"
+  },
+  "NEW-P-2jr0uqnbun": {
+   "op": "create",
+   "_pkey": "ANL-BTK-YSU-KOR-001",
+   "geom": [
+    104.01822171,
+    1.13123819
+   ],
+   "props": {
+    "ID_POV": "ANL-BTK-YSU-KOR-001-POV-01",
+    "ID_TITIK": "ANL-BTK-YSU-KOR-001",
+    "UID": "UID-1293",
+    "ID_WEBGIS": "ANL-BTK-YSU-KOR-001",
+    "POV_KE": 1,
+    "LON": 104.01822171,
+    "LAT": 1.13123819,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-07T14:42:08.447Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Yos Sudarso",
+    "KELURAHAN": "SEI PANAS",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Bersinyal",
+    "JARAK_M": 35.2
+   },
+   "by": "anonim",
+   "at": "2026-09-07T14:43:02.126Z"
+  },
+  "NEW-P-35kqkqnuti": {
+   "op": "create",
+   "_pkey": "ANL-BTK-YSU-KOR-001",
+   "geom": [
+    104.0176239,
+    1.13108953
+   ],
+   "props": {
+    "ID_POV": "ANL-BTK-YSU-KOR-001-POV-02",
+    "ID_TITIK": "ANL-BTK-YSU-KOR-001",
+    "UID": "UID-1293",
+    "ID_WEBGIS": "ANL-BTK-YSU-KOR-001",
+    "POV_KE": 2,
+    "LON": 104.0176239,
+    "LAT": 1.13108953,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-07T14:42:33.031Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Yos Sudarso",
+    "KELURAHAN": "SEI PANAS",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Bersinyal",
+    "JARAK_M": 84.1
+   },
+   "by": "anonim",
+   "at": "2026-09-07T14:43:05.247Z"
+  },
+  "NEW-P-mt135qoa66": {
+   "op": "create",
+   "_pkey": "ANL-BTK-YSU-KOR-001",
+   "geom": [
+    104.01777867,
+    1.13142628
+   ],
+   "props": {
+    "ID_POV": "ANL-BTK-YSU-KOR-001-POV-03",
+    "ID_TITIK": "ANL-BTK-YSU-KOR-001",
+    "UID": "UID-1293",
+    "ID_WEBGIS": "ANL-BTK-YSU-KOR-001",
+    "POV_KE": 3,
+    "LON": 104.01777867,
+    "LAT": 1.13142628,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-07T14:42:52.926Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Yos Sudarso",
+    "KELURAHAN": "SEI PANAS",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Bersinyal",
+    "JARAK_M": 83.7
+   },
+   "by": "anonim",
+   "at": "2026-09-07T14:42:57.798Z"
   }
  }
 }
