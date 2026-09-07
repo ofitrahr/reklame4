@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-07T14:45:29.819Z",
+ "updated": "2026-09-07T14:45:49.764Z",
  "reklame": {
   "ANL-LBJ-BUN-SIM-001": {
    "op": "delete",
@@ -113,10 +113,12 @@
     "LAT": 1.13095832,
     "JENIS": "Persimpangan",
     "TIPE": "Simpang Bersinyal",
-    "JML_POV": 3
+    "JML_POV": 3,
+    "UKR_MEDIA": "8 x 16 m",
+    "TIPE_MEDIA": "Videotron"
    },
    "by": "anonim",
-   "at": "2026-09-07T14:42:52.926Z",
+   "at": "2026-09-07T14:45:43.852Z",
    "geom": [
     104.01836889,
     1.13095832
