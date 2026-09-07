@@ -1,6 +1,400 @@
 {
  "v": 1,
- "updated": null,
- "reklame": {},
- "pov": {}
+ "updated": "2026-09-07T14:38:17.846Z",
+ "reklame": {
+  "ANL-LBJ-BUN-SIM-001": {
+   "op": "delete",
+   "props": {},
+   "by": "anonim",
+   "at": "2026-09-07T13:59:21.707Z"
+  },
+  "ANL-LBJ-PEM-SIM-003": {
+   "op": "delete",
+   "props": {},
+   "by": "anonim",
+   "at": "2026-09-07T13:59:48.681Z"
+  },
+  "PWK-LBJ-BUN-SIM-003": {
+   "op": "delete",
+   "props": {},
+   "by": "anonim",
+   "at": "2026-09-07T14:00:26.994Z"
+  },
+  "ANL-LBJ-IBO-SIM-002": {
+   "op": "delete",
+   "props": {},
+   "by": "anonim",
+   "at": "2026-09-07T14:01:24.922Z"
+  },
+  "NEW-R-alrhk6izl3": {
+   "op": "create",
+   "props": {
+    "ID_TITIK": "BARU-0001",
+    "UID": "BARU-0001",
+    "SUMBER": "Tambahan WebGIS",
+    "KOTA_KAB": "KOTA BATAM",
+    "STAT_TTK": "AKTIF",
+    "JENIS_EDIT": "tambah",
+    "LONG": 104.04557915,
+    "LAT": 1.11773842,
+    "JML_POV": 3,
+    "KECAMATAN": "BATAM KOTA",
+    "KELURAHAN": "TAMAN BALOI",
+    "TIPE": "Simpang Bersinyal",
+    "KELAS_JLN": "Arteri",
+    "STATUS_WPP": "Batam Centre - Kelurahan",
+    "NAMA_JALAN": "Jl. Ahmad Yani",
+    "KWN_SHP": null
+   },
+   "geom": [
+    104.04557915,
+    1.11773842
+   ],
+   "by": "Fitrah Ramadhan",
+   "at": "2026-09-07T14:15:14.366Z"
+  },
+  "NEW-R-awenmzpxr3": {
+   "op": "create",
+   "props": {
+    "ID_TITIK": "BARU-0002",
+    "UID": "BARU-0002",
+    "SUMBER": "Tambahan WebGIS",
+    "KOTA_KAB": "KOTA BATAM",
+    "STAT_TTK": "AKTIF",
+    "JENIS_EDIT": "tambah",
+    "LONG": 104.04650062,
+    "LAT": 1.11778264,
+    "JML_POV": 3,
+    "KEWENANGAN": "BP Batam",
+    "KELAS_JLN": "Arteri",
+    "NAMA_JALAN": "Jl. Ahmad Yani",
+    "KELURAHAN": "Teluk Tering",
+    "KECAMATAN": "BATAM KOTA",
+    "STATUS_WPP": "Batam Centre - Kelurahan",
+    "JENIS": "Persimpangan"
+   },
+   "geom": [
+    104.04650062,
+    1.11778264
+   ],
+   "by": "Fitrah Ramadhan",
+   "at": "2026-09-07T14:19:36.100Z"
+  },
+  "ANL-BTK-JAY-SIM-001": {
+   "op": "update",
+   "props": {
+    "LONG": 104.04138233,
+    "LAT": 1.11090282
+   },
+   "by": "Fitrah Ramadhan",
+   "at": "2026-09-07T14:21:35.102Z",
+   "geom": [
+    104.04138233,
+    1.11090282
+   ]
+  },
+  "PWK-BTK-YSU-SIM-002": {
+   "op": "update",
+   "props": {
+    "LONG": 104.01814357,
+    "LAT": 1.1307725
+   },
+   "by": "Fitrah Ramadhan",
+   "at": "2026-09-07T14:23:50.921Z",
+   "geom": [
+    104.01814357,
+    1.1307725
+   ]
+  }
+ },
+ "pov": {
+  "ANL-LBJ-BUN-SIM-001-POV-01": {
+   "op": "delete",
+   "props": {},
+   "by": "anonim",
+   "at": "2026-09-07T13:59:21.707Z"
+  },
+  "ANL-LBJ-BUN-SIM-001-POV-02": {
+   "op": "delete",
+   "props": {},
+   "by": "anonim",
+   "at": "2026-09-07T13:59:21.707Z"
+  },
+  "ANL-LBJ-BUN-SIM-001-POV-03": {
+   "op": "delete",
+   "props": {},
+   "by": "anonim",
+   "at": "2026-09-07T13:59:21.707Z"
+  },
+  "ANL-LBJ-PEM-SIM-003-POV-01": {
+   "op": "delete",
+   "props": {},
+   "by": "anonim",
+   "at": "2026-09-07T13:59:48.681Z"
+  },
+  "ANL-LBJ-PEM-SIM-003-POV-02": {
+   "op": "delete",
+   "props": {},
+   "by": "anonim",
+   "at": "2026-09-07T13:59:48.681Z"
+  },
+  "ANL-LBJ-PEM-SIM-003-POV-03": {
+   "op": "delete",
+   "props": {},
+   "by": "anonim",
+   "at": "2026-09-07T13:59:48.681Z"
+  },
+  "PWK-LBJ-BUN-SIM-003-POV-01": {
+   "op": "delete",
+   "props": {},
+   "by": "anonim",
+   "at": "2026-09-07T14:00:26.994Z"
+  },
+  "PWK-LBJ-BUN-SIM-003-POV-02": {
+   "op": "delete",
+   "props": {},
+   "by": "anonim",
+   "at": "2026-09-07T14:00:26.994Z"
+  },
+  "PWK-LBJ-BUN-SIM-003-POV-03": {
+   "op": "delete",
+   "props": {},
+   "by": "anonim",
+   "at": "2026-09-07T14:00:26.994Z"
+  },
+  "ANL-LBJ-IBO-SIM-002-POV-01": {
+   "op": "delete",
+   "props": {},
+   "by": "anonim",
+   "at": "2026-09-07T14:01:24.922Z"
+  },
+  "ANL-LBJ-IBO-SIM-002-POV-02": {
+   "op": "delete",
+   "props": {},
+   "by": "anonim",
+   "at": "2026-09-07T14:01:24.922Z"
+  },
+  "ANL-LBJ-IBO-SIM-002-POV-03": {
+   "op": "delete",
+   "props": {},
+   "by": "anonim",
+   "at": "2026-09-07T14:01:24.922Z"
+  },
+  "NEW-P-098aawn719": {
+   "op": "create",
+   "_pkey": "NEW-R-alrhk6izl3",
+   "geom": [
+    104.04631086,
+    1.11755336
+   ],
+   "props": {
+    "ID_POV": "BARU-0001-POV-01",
+    "ID_TITIK": "BARU-0001",
+    "UID": "BARU-0001",
+    "ID_WEBGIS": "BARU-0001",
+    "POV_KE": 1,
+    "LON": 104.04631086,
+    "LAT": 1.11755336,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "Fitrah Ramadhan",
+    "WAKTU": "2026-09-07T14:14:02.589Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Ahmad Yani",
+    "KELURAHAN": "TAMAN BALOI",
+    "KECAMATAN": "BATAM KOTA",
+    "TIPE": "Simpang Bersinyal",
+    "JARAK_M": 83.9
+   },
+   "by": "Fitrah Ramadhan",
+   "at": "2026-09-07T14:14:12.164Z"
+  },
+  "NEW-P-3kjjrjo60u": {
+   "op": "create",
+   "_pkey": "NEW-R-alrhk6izl3",
+   "geom": [
+    104.04624313,
+    1.11789794
+   ],
+   "props": {
+    "ID_POV": "BARU-0001-POV-02",
+    "ID_TITIK": "BARU-0001",
+    "UID": "BARU-0001",
+    "ID_WEBGIS": "BARU-0001",
+    "POV_KE": 2,
+    "LON": 104.04624313,
+    "LAT": 1.11789794,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "Fitrah Ramadhan",
+    "WAKTU": "2026-09-07T14:14:47.934Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Ahmad Yani",
+    "KELURAHAN": "TAMAN BALOI",
+    "KECAMATAN": "BATAM KOTA",
+    "TIPE": "Simpang Bersinyal",
+    "JARAK_M": 75.9
+   },
+   "by": "Fitrah Ramadhan",
+   "at": "2026-09-07T14:14:47.934Z"
+  },
+  "NEW-P-swxkfkoqf2": {
+   "op": "create",
+   "_pkey": "NEW-R-alrhk6izl3",
+   "geom": [
+    104.04583544,
+    1.11798107
+   ],
+   "props": {
+    "ID_POV": "BARU-0001-POV-03",
+    "ID_TITIK": "BARU-0001",
+    "UID": "BARU-0001",
+    "ID_WEBGIS": "BARU-0001",
+    "POV_KE": 3,
+    "LON": 104.04583544,
+    "LAT": 1.11798107,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "Fitrah Ramadhan",
+    "WAKTU": "2026-09-07T14:15:14.366Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Ahmad Yani",
+    "KELURAHAN": "TAMAN BALOI",
+    "KECAMATAN": "BATAM KOTA",
+    "TIPE": "Simpang Bersinyal",
+    "JARAK_M": 39.2
+   },
+   "by": "Fitrah Ramadhan",
+   "at": "2026-09-07T14:15:14.366Z"
+  },
+  "NEW-P-3te768siea": {
+   "op": "create",
+   "_pkey": "NEW-R-awenmzpxr3",
+   "geom": [
+    104.04585958,
+    1.11800252
+   ],
+   "props": {
+    "ID_POV": "BARU-0002-POV-01",
+    "ID_TITIK": "BARU-0002",
+    "UID": "BARU-0002",
+    "ID_WEBGIS": "BARU-0002",
+    "POV_KE": 1,
+    "LON": 104.04585958,
+    "LAT": 1.11800252,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "Fitrah Ramadhan",
+    "WAKTU": "2026-09-07T14:18:10.594Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Ahmad Yani",
+    "KELURAHAN": "Teluk Tering",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "JARAK_M": 75.3
+   },
+   "by": "Fitrah Ramadhan",
+   "at": "2026-09-07T14:18:10.594Z"
+  },
+  "NEW-P-jgqu2lt6ka": {
+   "op": "create",
+   "_pkey": "NEW-R-awenmzpxr3",
+   "geom": [
+    104.0458231,
+    1.11765714
+   ],
+   "props": {
+    "ID_POV": "BARU-0002-POV-02",
+    "ID_TITIK": "BARU-0002",
+    "UID": "BARU-0002",
+    "ID_WEBGIS": "BARU-0002",
+    "POV_KE": 2,
+    "LON": 104.0458231,
+    "LAT": 1.11765714,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "Fitrah Ramadhan",
+    "WAKTU": "2026-09-07T14:18:41.915Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Ahmad Yani",
+    "KELURAHAN": "Teluk Tering",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "JARAK_M": 76.6
+   },
+   "by": "Fitrah Ramadhan",
+   "at": "2026-09-07T14:20:04.852Z"
+  },
+  "NEW-P-592j4wucdg": {
+   "op": "create",
+   "_pkey": "NEW-R-awenmzpxr3",
+   "geom": [
+    104.046278,
+    1.1175177
+   ],
+   "props": {
+    "ID_POV": "BARU-0002-POV-03",
+    "ID_TITIK": "BARU-0002",
+    "UID": "BARU-0002",
+    "ID_WEBGIS": "BARU-0002",
+    "POV_KE": 3,
+    "LON": 104.046278,
+    "LAT": 1.1175177,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "Fitrah Ramadhan",
+    "WAKTU": "2026-09-07T14:19:36.100Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Ahmad Yani",
+    "KELURAHAN": "Teluk Tering",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "JARAK_M": 38.5
+   },
+   "by": "Fitrah Ramadhan",
+   "at": "2026-09-07T14:19:41.964Z"
+  },
+  "ANL-BTK-JAY-SIM-001-POV-01": {
+   "op": "update",
+   "props": {
+    "JARAK_M": 86.5
+   },
+   "by": "Fitrah Ramadhan",
+   "at": "2026-09-07T14:21:35.102Z"
+  },
+  "ANL-BTK-JAY-SIM-001-POV-02": {
+   "op": "update",
+   "props": {
+    "JARAK_M": 94.3
+   },
+   "by": "Fitrah Ramadhan",
+   "at": "2026-09-07T14:21:35.102Z"
+  },
+  "ANL-BTK-JAY-SIM-001-POV-03": {
+   "op": "update",
+   "props": {
+    "JARAK_M": 39.2
+   },
+   "by": "Fitrah Ramadhan",
+   "at": "2026-09-07T14:21:35.102Z"
+  },
+  "PWK-BTK-YSU-SIM-002-POV-01": {
+   "op": "update",
+   "props": {
+    "JARAK_M": 76.1
+   },
+   "by": "Fitrah Ramadhan",
+   "at": "2026-09-07T14:23:50.922Z"
+  },
+  "PWK-BTK-YSU-SIM-002-POV-02": {
+   "op": "update",
+   "props": {
+    "JARAK_M": 57.8
+   },
+   "by": "Fitrah Ramadhan",
+   "at": "2026-09-07T14:23:50.922Z"
+  },
+  "PWK-BTK-YSU-SIM-002-POV-03": {
+   "op": "update",
+   "props": {
+    "JARAK_M": 52.3
+   },
+   "by": "Fitrah Ramadhan",
+   "at": "2026-09-07T14:23:50.922Z"
+  }
+ }
 }
