@@ -2,7 +2,7 @@
 // dan penggeseran titik (drag) yang bekerja untuk tetikus maupun sentuh.
 
 import { Store } from './store.js';
-import { jarakM, toast, $ } from './util.js';
+import { jarakM, fmtJarak, toast, $ } from './util.js';
 
 const PALET = ['#4da3ff', '#ffd166', '#3fb950', '#f78166', '#bc8cff', '#56d4dd',
                '#ff7b3d', '#e3b341', '#7ee787', '#ff9bce', '#a5d6ff', '#d2a8ff'];
@@ -12,15 +12,22 @@ const WARNA_TETAP = {
 };
 const BATAM = [[0.95, 103.85], [1.25, 104.20]];
 
+// Label jarak pada garis POV baru muncul saat peta cukup dekat, dan dibatasi
+// jumlahnya, supaya tidak menutupi peta dan tetap ringan digambar.
+const ZOOM_LABEL = 15;
+const MAKS_LABEL = 250;
+const MIN_PANJANG_PX = 30;   // garis lebih pendek dari ini tidak diberi label
+
 export const Peta = {
   map: null, kanvas: null,
   lapisan: { reklame: new Map(), pov: new Map() },  // key -> L.CircleMarker
-  grup: { reklame: null, pov: null, garis: null, sorot: null },
+  grup: { reklame: null, pov: null, garis: null, labelJarak: null, sorot: null },
   pilih: null,                    // {ly, key}
   warnaOleh: 'JENIS',
   skalaWarna: new Map(),
   sembunyi: new Set(),            // nilai kategori yang dimatikan lewat legenda
-  tampil: { reklame: true, pov: true, garis: true, dihapus: false, tanda: true },
+  tampil: { reklame: true, pov: true, garis: true, labelJarak: true,
+            dihapus: false, tanda: true },
   alat: null,                     // null | 'add-reklame' | 'add-pov' | 'measure'
   modeEdit: false,
   _drag: null, _tekanKlik: 0,
@@ -51,6 +58,7 @@ export const Peta = {
 
     this.kanvas = L.canvas({ padding: 0.35 });
     this.grup.garis = L.layerGroup().addTo(this.map);
+    this.grup.labelJarak = L.layerGroup().addTo(this.map);
     this.grup.reklame = L.layerGroup().addTo(this.map);
     this.grup.pov = L.layerGroup().addTo(this.map);
     this.grup.sorot = L.layerGroup().addTo(this.map);
@@ -58,6 +66,9 @@ export const Peta = {
     this.gantiDasar('sat-label');
     this._pasangInteraksi();
     this.map.on('zoomend', () => this._perbaruiRadius());
+    // Label hanya digambar untuk garis yang sedang terlihat, jadi ikut
+    // disegarkan setiap kali peta digeser atau diperbesar.
+    this.map.on('moveend', () => this.gambarLabelJarak());
 
     // Lebar peta berubah saat panel samping atau tabel dibuka/ditutup, dan
     // ukuran awal bisa terbaca nol bila tata letak belum selesai dihitung.
@@ -161,21 +172,94 @@ export const Peta = {
 
   gambarGaris() {
     this.grup.garis.clearLayers();
-    if (!this.tampil.garis || !this.tampil.pov) return;
-    const seg = [];
-    for (const [key, p] of Store.semua('pov')) {
-      if (!p || !p.geom || !p.pkey) continue;
-      if (p.status === 'del' && !this.tampil.dihapus) continue;
-      const r = Store.get('reklame', p.pkey);
-      if (!r || !r.geom) continue;
-      if (r.status === 'del' && !this.tampil.dihapus) continue;
-      seg.push([[p.geom[1], p.geom[0]], [r.geom[1], r.geom[0]]]);
+    if (this.tampil.garis && this.tampil.pov) {
+      const seg = [];
+      for (const [key, p] of Store.semua('pov')) {
+        if (!p || !p.geom || !p.pkey) continue;
+        if (p.status === 'del' && !this.tampil.dihapus) continue;
+        const r = Store.get('reklame', p.pkey);
+        if (!r || !r.geom) continue;
+        if (r.status === 'del' && !this.tampil.dihapus) continue;
+        seg.push([[p.geom[1], p.geom[0]], [r.geom[1], r.geom[0]]]);
+      }
+      if (seg.length) {
+        L.polyline(seg, { renderer: this.kanvas, color: '#ffd166', weight: 1,
+                          opacity: 0.4, dashArray: '3,4', interactive: false })
+          .addTo(this.grup.garis);
+      }
     }
-    if (seg.length) {
-      L.polyline(seg, { renderer: this.kanvas, color: '#ffd166', weight: 1,
-                        opacity: 0.4, dashArray: '3,4', interactive: false })
-        .addTo(this.grup.garis);
+    // Selalu dipanggil, termasuk saat garis dimatikan, agar label lama ikut hilang.
+    this.gambarLabelJarak();
+  },
+
+  /**
+   * Tempelkan jarak dalam meter di tengah setiap garis POV -> reklame.
+   * Yang digambar hanya garis yang tengahnya sedang terlihat di layar, dan
+   * hanya pada perbesaran tertentu ke atas, agar peta tidak penuh tulisan.
+   */
+  gambarLabelJarak() {
+    this.grup.labelJarak.clearLayers();
+    let n = 0, terpotong = false;
+    const bolehGambar = this.tampil.labelJarak && this.tampil.garis && this.tampil.pov;
+
+    if (bolehGambar && this.map.getZoom() >= ZOOM_LABEL) {
+      const b = this.map.getBounds().pad(0.1);
+      const terisi = [];                        // kotak layar yang sudah dipakai label
+      for (const [key, p] of Store.semua('pov')) {
+        if (!p || !p.geom || !p.pkey) continue;
+        if (p.status === 'del' && !this.tampil.dihapus) continue;
+        const r = Store.get('reklame', p.pkey);
+        if (!r || !r.geom) continue;
+        if (r.status === 'del' && !this.tampil.dihapus) continue;
+
+        const tengah = [(p.geom[1] + r.geom[1]) / 2, (p.geom[0] + r.geom[0]) / 2];
+        if (!b.contains(tengah)) continue;
+
+        // Garis yang terlalu pendek di layar tidak muat diberi label.
+        const a1 = this.map.latLngToContainerPoint([p.geom[1], p.geom[0]]);
+        const a2 = this.map.latLngToContainerPoint([r.geom[1], r.geom[0]]);
+        if (Math.hypot(a2.x - a1.x, a2.y - a1.y) < MIN_PANJANG_PX) continue;
+
+        const info = this._ukurGaris(p, r);
+        const q = this.map.latLngToContainerPoint(tengah);
+        const w = info.teks.length * 6 + (info.beda ? 20 : 10), h = 15;
+        const kotak = [q.x - w / 2, q.y - h / 2, q.x + w / 2, q.y + h / 2];
+        // Lewati label yang akan menimpa label lain agar peta tetap terbaca.
+        if (terisi.some((k) => k[0] < kotak[2] && k[2] > kotak[0] &&
+                               k[1] < kotak[3] && k[3] > kotak[1])) continue;
+
+        if (n >= MAKS_LABEL) { terpotong = true; break; }
+        terisi.push(kotak);
+        this._labelJarak(tengah, info, this.grup.labelJarak);
+        n++;
+      }
     }
+
+    const nota = $('#lbl-note');
+    if (nota) {
+      nota.textContent = !bolehGambar ? ''
+        : terpotong ? MAKS_LABEL + '+'
+        : n === 0 ? 'perbesar'
+        : String(n);
+    }
+  },
+
+  /**
+   * Jarak sebuah garis POV -> reklame. Dihitung dari geometri yang benar-benar
+   * digambar, bukan dari kolom JARAK_M, supaya label selalu sesuai dengan garis
+   * yang terlihat. Selisih besar terhadap kolomnya ditandai agar ketahuan.
+   */
+  _ukurGaris(p, r) {
+    const d = jarakM(p.geom[0], p.geom[1], r.geom[0], r.geom[1]);
+    const kolom = p.props.JARAK_M;
+    return { d, teks: fmtJarak(d), beda: kolom != null && Math.abs(kolom - d) > 1 };
+  },
+
+  _labelJarak(pos, info, grup, kelas = '') {
+    L.tooltip({
+      permanent: true, direction: 'center', interactive: false,
+      className: 'jarak' + (kelas ? ' ' + kelas : '') + (info.beda ? ' beda' : ''),
+    }).setLatLng(pos).setContent(info.teks).addTo(grup);
   },
 
   // ------------------------------------------------------------ warna
@@ -234,7 +318,12 @@ export const Peta = {
       : (f.pkey ? [Store.get('reklame', f.pkey)] : []);
     const seg = [];
     for (const o of pasangan) {
-      if (o?.geom) seg.push([[f.geom[1], f.geom[0]], [o.geom[1], o.geom[0]]]);
+      if (!o?.geom) continue;
+      seg.push([[f.geom[1], f.geom[0]], [o.geom[1], o.geom[0]]]);
+      // Jarak titik terpilih selalu diberi label, berapa pun perbesarannya.
+      const tengah = [(f.geom[1] + o.geom[1]) / 2, (f.geom[0] + o.geom[0]) / 2];
+      const [pov, rek] = ly === 'reklame' ? [o, f] : [f, o];
+      this._labelJarak(tengah, this._ukurGaris(pov, rek), this.grup.sorot, 'pilih');
     }
     if (seg.length) {
       L.polyline(seg, { renderer: this.kanvas, color: '#fff', weight: 1.8,
@@ -327,7 +416,16 @@ export const Peta = {
       ? Store.anakDari(d.key).map((k) => Store.get('pov', k))
       : (f?.pkey ? [Store.get('reklame', f.pkey)] : []);
     const seg = [];
-    for (const o of pasangan) if (o?.geom) seg.push([[ll.lat, ll.lng], [o.geom[1], o.geom[0]]]);
+    for (const o of pasangan) {
+      if (!o?.geom) continue;
+      seg.push([[ll.lat, ll.lng], [o.geom[1], o.geom[0]]]);
+      // Jarak dihitung dari posisi kursor supaya angkanya berubah saat digeser.
+      L.tooltip({ permanent: true, direction: 'center', interactive: false,
+                  className: 'jarak pilih' })
+        .setLatLng([(ll.lat + o.geom[1]) / 2, (ll.lng + o.geom[0]) / 2])
+        .setContent(fmtJarak(jarakM(ll.lng, ll.lat, o.geom[0], o.geom[1])))
+        .addTo(this.grup.sorot);
+    }
     if (seg.length) {
       L.polyline(seg, { renderer: this.kanvas, color: '#fff', weight: 1.8,
                         opacity: 0.85, interactive: false }).addTo(this.grup.sorot);

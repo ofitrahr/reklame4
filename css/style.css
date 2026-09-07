@@ -125,6 +125,7 @@ body.dragging-pt #map{cursor:grabbing!important}
 .sw-reklame{background:#4da3ff}.sw-pov{background:#ffd166}
 .sw-link{background:none;border:0;border-top:2px dashed #ffd16688;height:0;border-radius:0;width:13px}
 .sw-del{background:#6b7280}.sw-flag{background:var(--danger)}
+.sw-jarak{background:#0b0f14;border-color:#ffd166;border-radius:3px}
 #legend em{margin-left:auto;color:var(--muted);font-style:normal;font-size:11px}
 
 .hint{position:absolute;left:50%;transform:translateX(-50%);bottom:22px;z-index:900;
@@ -279,6 +280,20 @@ body.editing #atable tbody td[data-f]:hover{box-shadow:inset 0 0 0 1px var(--acc
 .leaflet-tooltip.lbl{background:#0b0f14cc;border:0;color:#fff;font-size:11px;
   padding:1px 5px;box-shadow:none;text-shadow:0 1px 3px #000}
 .leaflet-tooltip.lbl:before{display:none}
+
+/* label jarak pada garis POV -> reklame */
+.leaflet-tooltip.jarak{
+  background:#0b0f14cc;border:0;border-radius:4px;color:#ffd166;
+  font-size:10.5px;line-height:1.35;padding:0 4px;box-shadow:none;
+  text-shadow:0 1px 3px #000,0 0 2px #000;font-variant-numeric:tabular-nums;
+  white-space:nowrap;pointer-events:none;
+}
+.leaflet-tooltip.jarak:before{display:none}
+.leaflet-tooltip.jarak.pilih{color:#fff;font-size:11.5px;font-weight:600;
+  background:#0b0f14ee;border:1px solid #ffffff4d;border-radius:10px;padding:1px 7px}
+/* nilai kolom JARAK_M tidak cocok dengan panjang garis sebenarnya */
+.leaflet-tooltip.jarak.beda{color:#ff9d94}
+.leaflet-tooltip.jarak.beda:after{content:" ⚠"}
 
 /* ============================================================ mobile */
 @media (max-width:900px){

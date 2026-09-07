@@ -219,6 +219,7 @@ const App = {
     pasang('#ly-reklame', 'reklame');
     pasang('#ly-pov', 'pov');
     pasang('#ly-link', 'garis');
+    pasang('#ly-label', 'labelJarak');
     pasang('#ly-deleted', 'dihapus');
     pasang('#ly-flag', 'tanda');
 
