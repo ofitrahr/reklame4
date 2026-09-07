@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<title>WebGIS Reklame Batam</title>
+<meta name="description" content="Peta interaktif titik reklame dan titik POV Kota Batam dengan mode edit geometri dan atribut.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📍</text></svg>">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="css/style.css?v=7">
+</head>
+<body>
+
+<div id="boot">
+  <div class="boot-box">
+    <div class="boot-title">WebGIS Reklame Batam</div>
+    <div class="boot-bar"><div id="boot-fill"></div></div>
+    <div id="boot-msg">Memuat data…</div>
+  </div>
+</div>
+
+<header id="topbar">
+  <div class="brand">
+    <span class="brand-mark">◈</span>
+    <span class="brand-text">Reklame Batam</span>
+  </div>
+
+  <div class="tb-group">
+    <button id="btn-mode" class="btn btn-mode" title="Aktifkan mode edit (E)">
+      <span class="dot"></span><span id="mode-label">Mode Lihat</span>
+    </button>
+  </div>
+
+  <div class="tb-group" id="edit-tools" hidden>
+    <button class="btn tool" data-tool="add-reklame" title="Tambah titik reklame">＋ Reklame</button>
+    <button class="btn tool" data-tool="add-pov" title="Tambah titik POV (pilih reklame induk dulu)">＋ POV</button>
+    <button class="btn tool danger" data-tool="delete" title="Hapus titik terpilih (Del)">🗑 Hapus</button>
+    <span class="sep"></span>
+    <button class="btn" id="btn-undo" title="Urungkan (Ctrl+Z)" disabled>↶</button>
+    <button class="btn" id="btn-redo" title="Ulangi (Ctrl+Y)" disabled>↷</button>
+  </div>
+
+  <div class="tb-group">
+    <button class="btn tool" data-tool="measure" title="Penggaris — ukur jarak &amp; luas (M)">📏 Penggaris</button>
+  </div>
+
+  <div class="tb-spacer"></div>
+
+  <div class="tb-group">
+    <input id="search" type="search" placeholder="Cari ID / jalan / kelurahan…" autocomplete="off">
+    <div id="search-results" hidden></div>
+  </div>
+
+  <div class="tb-group">
+    <select id="basemap" title="Peta dasar">
+      <option value="sat-label">Satelit + Label Jalan</option>
+      <option value="sat">Satelit</option>
+      <option value="osm">OpenStreetMap</option>
+    </select>
+  </div>
+
+  <div class="tb-group">
+    <button id="btn-save" class="btn btn-save" title="Simpan perubahan ke GitHub (Ctrl+S)">
+      <span id="save-icon">☁</span><span id="save-text">Tersimpan</span>
+    </button>
+    <button class="btn icon" id="btn-settings" title="Pengaturan &amp; koneksi GitHub">⚙</button>
+  </div>
+</header>
+
+<main id="layout">
+  <section id="map-wrap">
+    <div id="map"></div>
+
+    <div id="legend" class="floating">
+      <div class="legend-head">
+        <strong>Tampilan</strong>
+        <button class="mini" id="legend-toggle" title="Sembunyikan">–</button>
+      </div>
+      <div class="legend-body">
+        <label class="chk"><input type="checkbox" id="ly-reklame" checked><span class="sw sw-reklame"></span> Reklame <em id="cnt-reklame">0</em></label>
+        <label class="chk"><input type="checkbox" id="ly-pov" checked><span class="sw sw-pov"></span> Titik POV <em id="cnt-pov">0</em></label>
+        <label class="chk"><input type="checkbox" id="ly-link" checked><span class="sw sw-link"></span> Garis POV → Reklame</label>
+        <hr>
+        <label class="lbl">Warnai reklame berdasarkan</label>
+        <select id="color-by">
+          <option value="JENIS">Jenis lokasi</option>
+          <option value="STAT_TTK">Status titik</option>
+          <option value="KEWENANGAN">Kewenangan</option>
+          <option value="TIPE_MEDIA">Tipe media</option>
+          <option value="KELAS_PREM">Kelas premium</option>
+          <option value="_none">Warna tunggal</option>
+        </select>
+        <div id="color-legend"></div>
+        <hr>
+        <label class="chk"><input type="checkbox" id="ly-deleted"><span class="sw sw-del"></span> Tampilkan yang dihapus</label>
+        <label class="chk"><input type="checkbox" id="ly-flag" checked><span class="sw sw-flag"></span> Tandai koordinat janggal</label>
+      </div>
+    </div>
+
+    <div id="measure-box" class="floating" hidden>
+      <div class="legend-head"><strong>📏 Penggaris</strong>
+        <button class="mini" id="measure-close" title="Selesai">✕</button></div>
+      <div class="legend-body">
+        <div id="measure-readout">Klik di peta untuk mulai mengukur.<br><small>Klik dua kali atau Esc untuk selesai.</small></div>
+        <button class="btn small" id="measure-clear">Bersihkan</button>
+      </div>
+    </div>
+
+    <div id="hint" class="hint" hidden></div>
+    <div id="scalebar-slot"></div>
+  </section>
+
+  <aside id="side" class="collapsed">
+    <div class="side-head">
+      <div id="side-title">Tidak ada titik terpilih</div>
+      <button class="mini" id="side-close" title="Tutup">✕</button>
+    </div>
+    <div id="side-sub"></div>
+    <div id="side-body">
+      <div class="empty">Klik salah satu titik di peta untuk melihat dan mengedit atributnya.</div>
+    </div>
+  </aside>
+</main>
+
+<section id="tablepane" class="collapsed">
+  <div class="table-head">
+    <button class="mini" id="table-toggle" title="Buka/tutup tabel atribut">▲</button>
+    <strong>Tabel Atribut</strong>
+    <div class="tabs">
+      <button class="tab active" data-layer="reklame">Reklame <em id="tcnt-reklame">0</em></button>
+      <button class="tab" data-layer="pov">POV <em id="tcnt-pov">0</em></button>
+    </div>
+    <input id="table-filter" type="search" placeholder="Saring baris…" autocomplete="off">
+    <label class="chk small"><input type="checkbox" id="only-view"> Hanya yang terlihat di peta</label>
+    <label class="chk small"><input type="checkbox" id="only-changed"> Hanya yang berubah</label>
+    <div class="tb-spacer"></div>
+    <button class="btn small" id="btn-cols">Kolom…</button>
+    <button class="btn small" id="btn-export">⭳ Ekspor</button>
+  </div>
+  <div id="table-scroll"><table id="atable"><thead><tr id="thead-row"></tr></thead><tbody id="tbody"></tbody></table></div>
+  <div class="table-foot"><span id="table-info">—</span></div>
+</section>
+
+<!-- ------------------------------------------------------------- modals -->
+<div id="modal-backdrop" hidden></div>
+
+<div class="modal" id="modal-settings" hidden>
+  <div class="modal-head"><strong>Pengaturan</strong><button class="mini" data-close>✕</button></div>
+  <div class="modal-body">
+    <h4>Identitas pengedit</h4>
+    <p class="muted">Nama ini dicatat pada setiap perubahan agar terlihat siapa mengubah apa.</p>
+    <label class="fld"><span>Nama Anda</span><input id="cfg-editor" placeholder="mis. Budi"></label>
+
+    <h4>Koneksi GitHub</h4>
+    <p class="muted">Perubahan disimpan sebagai commit ke repositori Anda. Token hanya tersimpan di
+      peramban perangkat ini dan tidak pernah ikut tersimpan ke dalam data.</p>
+    <div class="grid2">
+      <label class="fld"><span>Pemilik (user/org)</span><input id="cfg-owner" placeholder="ofitrahramadhan"></label>
+      <label class="fld"><span>Repositori</span><input id="cfg-repo" placeholder="reklame3"></label>
+      <label class="fld"><span>Branch</span><input id="cfg-branch" placeholder="main"></label>
+      <label class="fld"><span>Token akses</span><input id="cfg-token" type="password" placeholder="github_pat_…"></label>
+    </div>
+    <div class="row">
+      <button class="btn" id="btn-test">Uji koneksi</button>
+      <span id="test-result" class="muted"></span>
+    </div>
+    <details class="help">
+      <summary>Cara membuat token (sekali saja)</summary>
+      <ol>
+        <li>Buka <b>github.com → Settings → Developer settings → Personal access tokens → Fine-grained tokens</b>.</li>
+        <li><b>Generate new token</b>. Beri nama bebas, masa berlaku sesuai kebutuhan.</li>
+        <li><b>Repository access → Only select repositories</b>, pilih repositori peta ini saja.</li>
+        <li><b>Permissions → Repository permissions → Contents → Read and write</b>.</li>
+        <li>Salin token yang muncul, tempel di kolom di atas. Token hanya ditampilkan sekali oleh GitHub.</li>
+      </ol>
+      <p class="warn">Jangan bagikan token ini. Siapa pun yang memilikinya dapat mengubah isi repositori tersebut.</p>
+    </details>
+
+    <h4>Penyimpanan</h4>
+    <label class="chk"><input type="checkbox" id="cfg-autosave" checked>
+      Simpan otomatis ke GitHub setelah 5 detik tanpa aktivitas</label>
+    <div class="row"><button class="btn" id="btn-reload">Muat ulang dari GitHub</button>
+      <span class="muted">Ambil perubahan terbaru dari pengedit lain.</span></div>
+  </div>
+  <div class="modal-foot"><button class="btn primary" data-close>Selesai</button></div>
+</div>
+
+<div class="modal" id="modal-cols" hidden>
+  <div class="modal-head"><strong>Pilih kolom tabel</strong><button class="mini" data-close>✕</button></div>
+  <div class="modal-body">
+    <input id="col-search" type="search" placeholder="Cari kolom…">
+    <div class="row"><button class="btn small" id="cols-default">Kembalikan bawaan</button>
+      <button class="btn small" id="cols-all">Pilih semua</button>
+      <button class="btn small" id="cols-none">Kosongkan</button></div>
+    <div id="col-list"></div>
+  </div>
+  <div class="modal-foot"><button class="btn primary" data-close>Selesai</button></div>
+</div>
+
+<div class="modal" id="modal-export" hidden>
+  <div class="modal-head"><strong>Ekspor data</strong><button class="mini" data-close>✕</button></div>
+  <div class="modal-body">
+    <p class="muted">Hasil ekspor sudah termasuk seluruh perubahan yang tersimpan.</p>
+    <div class="exp-grid">
+      <button class="btn" data-export="reklame-geojson">Reklame — GeoJSON</button>
+      <button class="btn" data-export="pov-geojson">POV — GeoJSON</button>
+      <button class="btn" data-export="reklame-csv">Reklame — CSV (Excel)</button>
+      <button class="btn" data-export="pov-csv">POV — CSV (Excel)</button>
+      <button class="btn" data-export="edits">Berkas perubahan (edits.json)</button>
+    </div>
+    <p class="muted">Untuk kembali ke format <b>GeoPackage (.gpkg)</b>, jalankan
+      <code>python tools/apply_edits.py</code> di komputer — skrip itu menerapkan
+      seluruh perubahan ke GPKG asli.</p>
+  </div>
+  <div class="modal-foot"><button class="btn primary" data-close>Tutup</button></div>
+</div>
+
+<div id="toasts"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script type="module" src="js/app.js?v=7"></script>
+</body>
+</html>
