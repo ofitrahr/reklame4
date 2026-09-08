@@ -1,0 +1,6 @@
+keluaran/
+*.pyc
+__pycache__/
+.claude/
+.DS_Store
+Thumbs.db
