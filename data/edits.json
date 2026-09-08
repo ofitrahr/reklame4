@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T02:07:22.490Z",
+ "updated": "2026-09-08T02:07:56.566Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -129,6 +129,14 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:07:16.595Z"
+  },
+  "ANL-BTK-CBO-SIM-002": {
+   "op": "update",
+   "props": {
+    "JML_POV": 1
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:07:50.749Z"
   }
  },
  "pov": {
@@ -754,6 +762,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:07:16.595Z"
+  },
+  "NEW-P-km775b55gc": {
+   "op": "create",
+   "_pkey": "ANL-BTK-CBO-SIM-002",
+   "geom": [
+    104.07715291,
+    1.1118936
+   ],
+   "props": {
+    "ID_POV": "ANL-BTK-CBO-SIM-002-POV-01",
+    "ID_TITIK": "ANL-BTK-CBO-SIM-002",
+    "UID": "UID-2501",
+    "ID_WEBGIS": "ANL-BTK-CBO-SIM-002",
+    "POV_KE": 1,
+    "LON": 104.07715291,
+    "LAT": 1.1118936,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:07:50.748Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Central Boulevard",
+    "KELURAHAN": "BELIAN",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 31.3
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:07:50.748Z"
   }
  }
 }
