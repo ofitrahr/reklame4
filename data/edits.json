@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T01:35:31.336Z",
+ "updated": "2026-09-08T01:36:12.164Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -9,6 +9,14 @@
    },
    "by": "anonim",
    "at": "2026-09-08T01:34:08.810Z"
+  },
+  "PWK-BTK-JAY-SIM-001": {
+   "op": "update",
+   "props": {
+    "JML_POV": 3
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:36:03.220Z"
   }
  },
  "pov": {
@@ -54,6 +62,35 @@
     104.04629303,
     1.11755036
    ]
+  },
+  "NEW-P-utlzuv09lg": {
+   "op": "create",
+   "_pkey": "PWK-BTK-JAY-SIM-001",
+   "geom": [
+    104.04628013,
+    1.11750863
+   ],
+   "props": {
+    "ID_POV": "PWK-BTK-JAY-SIM-001-POV-03",
+    "ID_TITIK": "PWK-BTK-JAY-SIM-001",
+    "UID": "UID-2337",
+    "ID_WEBGIS": "PWK-BTK-JAY-SIM-001",
+    "POV_KE": 3,
+    "LON": 104.04628013,
+    "LAT": 1.11750863,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T01:36:03.220Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Jend. Ahmad Yani",
+    "KELURAHAN": "BALOI PERMAI",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Bersinyal",
+    "JARAK_M": 18.9
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:36:06.364Z"
   }
  }
 }
