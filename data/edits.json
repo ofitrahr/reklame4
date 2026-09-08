@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T02:46:36.182Z",
+ "updated": "2026-09-08T02:46:44.611Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -275,12 +275,12 @@
   "ANL-LBJ-DMN-SIM-002": {
    "op": "update",
    "props": {
-    "JML_POV": 1,
+    "JML_POV": 2,
     "LONG": 104.00488742,
     "LAT": 1.14512011
    },
    "by": "anonim",
-   "at": "2026-09-08T02:46:30.150Z",
+   "at": "2026-09-08T02:46:38.895Z",
    "geom": [
     104.00488742,
     1.14512011
@@ -2418,6 +2418,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:46:30.150Z"
+  },
+  "NEW-P-161vr6j1v3": {
+   "op": "create",
+   "_pkey": "ANL-LBJ-DMN-SIM-002",
+   "geom": [
+    104.00499211,
+    1.14509129
+   ],
+   "props": {
+    "ID_POV": "ANL-LBJ-DMN-SIM-002-POV-02",
+    "ID_TITIK": "ANL-LBJ-DMN-SIM-002",
+    "UID": "UID-2488",
+    "ID_WEBGIS": "ANL-LBJ-DMN-SIM-002",
+    "POV_KE": 2,
+    "LON": 104.00499211,
+    "LAT": 1.14509129,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:46:38.895Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Dc Mall - Nagoya Newton",
+    "KELURAHAN": "LUBUK BAJA KOTA",
+    "KECAMATAN": "LUBUK BAJA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 12.1
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:46:38.895Z"
   }
  }
 }
