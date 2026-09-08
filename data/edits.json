@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T02:39:33.895Z",
+ "updated": "2026-09-08T02:40:03.104Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -1937,6 +1937,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:39:27.932Z"
+  },
+  "NEW-P-rd8q2dahnh": {
+   "op": "create",
+   "_pkey": "ANL-BTK-DUR-SIM-001",
+   "geom": [
+    104.03457284,
+    1.13601545
+   ],
+   "props": {
+    "ID_POV": "ANL-BTK-DUR-SIM-001-POV-04",
+    "ID_TITIK": "ANL-BTK-DUR-SIM-001",
+    "UID": "UID-2530",
+    "ID_WEBGIS": "ANL-BTK-DUR-SIM-001",
+    "POV_KE": 4,
+    "LON": 104.03457284,
+    "LAT": 1.13601545,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:39:59.453Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Kp. Durian",
+    "KELURAHAN": "Batam Kota",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 14.9
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:39:59.453Z"
   }
  }
 }
