@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T02:57:04.337Z",
+ "updated": "2026-09-08T02:57:33.211Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -341,6 +341,14 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:56:34.862Z"
+  },
+  "ANL-BAJ-GBR-SIM-002": {
+   "op": "update",
+   "props": {
+    "JML_POV": 1
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:57:27.519Z"
   }
  },
  "pov": {
@@ -3170,6 +3178,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:57:02.038Z"
+  },
+  "NEW-P-9klw4fwycf": {
+   "op": "create",
+   "_pkey": "ANL-BAJ-GBR-SIM-002",
+   "geom": [
+    103.97739267,
+    1.05221253
+   ],
+   "props": {
+    "ID_POV": "ANL-BAJ-GBR-SIM-002-POV-01",
+    "ID_TITIK": "ANL-BAJ-GBR-SIM-002",
+    "UID": "UID-2484",
+    "ID_WEBGIS": "ANL-BAJ-GBR-SIM-002",
+    "POV_KE": 1,
+    "LON": 103.97739267,
+    "LAT": 1.05221253,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:57:27.519Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. R. Suprapto",
+    "KELURAHAN": "BULIANG",
+    "KECAMATAN": "BATU AJI",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 19.5
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:57:27.519Z"
   }
  }
 }
