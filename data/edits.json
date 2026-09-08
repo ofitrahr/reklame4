@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T02:56:52.248Z",
+ "updated": "2026-09-08T02:57:04.337Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -3146,8 +3146,8 @@
    "op": "create",
    "_pkey": "ANL-BAJ-GBR-SIM-003",
    "geom": [
-    103.97220165,
-    1.04919742
+    103.97230597,
+    1.04918604
    ],
    "props": {
     "ID_POV": "ANL-BAJ-GBR-SIM-003-POV-03",
@@ -3155,8 +3155,8 @@
     "UID": "UID-2524",
     "ID_WEBGIS": "ANL-BAJ-GBR-SIM-003",
     "POV_KE": 3,
-    "LON": 103.97220165,
-    "LAT": 1.04919742,
+    "LON": 103.97230597,
+    "LAT": 1.04918604,
     "STATUS_POV": "baru",
     "SURVEYOR": "",
     "WAKTU": "2026-09-08T02:56:48.654Z",
@@ -3166,10 +3166,10 @@
     "KECAMATAN": "BATU AJI",
     "JENIS": "Persimpangan",
     "TIPE": "Simpang Tak Bersinyal",
-    "JARAK_M": 31
+    "JARAK_M": 19.7
    },
    "by": "anonim",
-   "at": "2026-09-08T02:56:48.654Z"
+   "at": "2026-09-08T02:57:02.038Z"
   }
  }
 }
