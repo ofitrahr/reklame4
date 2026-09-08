@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T01:48:14.928Z",
+ "updated": "2026-09-08T01:48:51.679Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -81,6 +81,14 @@
    },
    "by": "anonim",
    "at": "2026-09-08T01:48:09.158Z"
+  },
+  "ANL-SKP-SK2-SIM-001": {
+   "op": "update",
+   "props": {
+    "JML_POV": 3
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:48:43.367Z"
   }
  },
  "pov": {
@@ -387,6 +395,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T01:48:09.158Z"
+  },
+  "NEW-P-pusk4dgk4n": {
+   "op": "create",
+   "_pkey": "ANL-SKP-SK2-SIM-001",
+   "geom": [
+    103.94501188,
+    1.11068023
+   ],
+   "props": {
+    "ID_POV": "ANL-SKP-SK2-SIM-001-POV-03",
+    "ID_TITIK": "ANL-SKP-SK2-SIM-001",
+    "UID": "UID-2306",
+    "ID_WEBGIS": "ANL-SKP-SK2-SIM-001",
+    "POV_KE": 3,
+    "LON": 103.94501188,
+    "LAT": 1.11068023,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T01:48:43.367Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Kawasan Industri Sekupang",
+    "KELURAHAN": "SEI HARAPAN",
+    "KECAMATAN": "SEKUPANG",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 12.8
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:48:43.367Z"
   }
  }
 }
