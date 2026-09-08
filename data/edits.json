@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T01:36:12.164Z",
+ "updated": "2026-09-08T01:40:57.140Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -17,6 +17,14 @@
    },
    "by": "anonim",
    "at": "2026-09-08T01:36:03.220Z"
+  },
+  "PWK-BTK-PBA-SIM-005": {
+   "op": "update",
+   "props": {
+    "JML_POV": 3
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:40:50.956Z"
   }
  },
  "pov": {
@@ -91,6 +99,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T01:36:06.364Z"
+  },
+  "NEW-P-r2vy366fm3": {
+   "op": "create",
+   "_pkey": "PWK-BTK-PBA-SIM-005",
+   "geom": [
+    104.05123901,
+    1.11535447
+   ],
+   "props": {
+    "ID_POV": "PWK-BTK-PBA-SIM-005-POV-03",
+    "ID_TITIK": "PWK-BTK-PBA-SIM-005",
+    "UID": "UID-2366",
+    "ID_WEBGIS": "PWK-BTK-PBA-SIM-005",
+    "POV_KE": 3,
+    "LON": 104.05123901,
+    "LAT": 1.11535447,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T01:40:50.956Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Laksamana Bintan",
+    "KELURAHAN": "TELUK TERING",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Bersinyal",
+    "JARAK_M": 16.6
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:40:50.956Z"
   }
  }
 }
