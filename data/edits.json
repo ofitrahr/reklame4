@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-07T14:48:19.538Z",
+ "updated": "2026-09-08T00:53:55.200Z",
  "reklame": {
   "ANL-LBJ-BUN-SIM-001": {
    "op": "delete",
@@ -131,6 +131,14 @@
    },
    "by": "anonim",
    "at": "2026-09-07T14:48:15.383Z"
+  },
+  "ANL-BAP-RAH-SIM-019": {
+   "op": "update",
+   "props": {
+    "JML_POV": 3
+   },
+   "by": "anonim",
+   "at": "2026-09-08T00:53:52.205Z"
   }
  },
  "pov": {
@@ -508,6 +516,35 @@
    },
    "by": "anonim",
    "at": "2026-09-07T14:42:57.798Z"
+  },
+  "NEW-P-7n2g0qi0nh": {
+   "op": "create",
+   "_pkey": "ANL-BAP-RAH-SIM-019",
+   "geom": [
+    104.00324723,
+    1.15233298
+   ],
+   "props": {
+    "ID_POV": "ANL-BAP-RAH-SIM-019-POV-03",
+    "ID_TITIK": "ANL-BAP-RAH-SIM-019",
+    "UID": "UID-2518",
+    "ID_WEBGIS": "ANL-BAP-RAH-SIM-019",
+    "POV_KE": 3,
+    "LON": 104.00324723,
+    "LAT": 1.15233298,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T00:53:52.205Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Raja Ali Haji",
+    "KELURAHAN": "SEI JODOH",
+    "KECAMATAN": "BATU AMPAR",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 21.9
+   },
+   "by": "anonim",
+   "at": "2026-09-08T00:53:52.205Z"
   }
  }
 }
