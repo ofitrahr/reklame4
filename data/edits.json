@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T02:38:07.539Z",
+ "updated": "2026-09-08T02:38:20.941Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -227,10 +227,10 @@
   "ANL-BTK-UPH-SIM-001": {
    "op": "update",
    "props": {
-    "JML_POV": 1
+    "JML_POV": 2
    },
    "by": "anonim",
-   "at": "2026-09-08T02:38:01.410Z"
+   "at": "2026-09-08T02:38:14.754Z"
   }
  },
  "pov": {
@@ -1813,6 +1813,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:38:01.410Z"
+  },
+  "NEW-P-q8vq2888v6": {
+   "op": "create",
+   "_pkey": "ANL-BTK-UPH-SIM-001",
+   "geom": [
+    104.05967027,
+    1.10962221
+   ],
+   "props": {
+    "ID_POV": "ANL-BTK-UPH-SIM-001-POV-02",
+    "ID_TITIK": "ANL-BTK-UPH-SIM-001",
+    "UID": "UID-2496",
+    "ID_WEBGIS": "ANL-BTK-UPH-SIM-001",
+    "POV_KE": 2,
+    "LON": 104.05967027,
+    "LAT": 1.10962221,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:38:14.754Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Utama Perum Hang Tuah",
+    "KELURAHAN": "BELIAN",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 14.6
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:38:14.754Z"
   }
  }
 }
