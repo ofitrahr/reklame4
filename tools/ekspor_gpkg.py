@@ -26,7 +26,10 @@ WKT_4326 = (
     'UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],'
     'AUTHORITY["EPSG","4326"]]'
 )
-TIPE_SQL = {"integer": "MEDIUMINT", "number": "DOUBLE", "text": "TEXT"}
+# INTEGER pada GeoPackage berarti 8 byte. MEDIUMINT hanya 4 byte, sehingga
+# nilai rupiah di atas 2,1 miliar akan melipat jadi negatif saat berkas
+# dibuka-tulis ulang oleh QGIS.
+TIPE_SQL = {"integer": "INTEGER", "number": "DOUBLE", "text": "TEXT"}
 
 
 def blob_point(lon, lat, srs=4326):
