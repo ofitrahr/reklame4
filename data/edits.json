@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T02:01:27.605Z",
+ "updated": "2026-09-08T02:01:36.646Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -109,10 +109,10 @@
   "ANL-BTK-BSM-SIM-001": {
    "op": "update",
    "props": {
-    "JML_POV": 2
+    "JML_POV": 3
    },
    "by": "anonim",
-   "at": "2026-09-08T02:01:21.579Z"
+   "at": "2026-09-08T02:01:30.947Z"
   }
  },
  "pov": {
@@ -564,6 +564,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:01:21.579Z"
+  },
+  "NEW-P-rajeswx0eb": {
+   "op": "create",
+   "_pkey": "ANL-BTK-BSM-SIM-001",
+   "geom": [
+    104.03000772,
+    1.12966257
+   ],
+   "props": {
+    "ID_POV": "ANL-BTK-BSM-SIM-001-POV-03",
+    "ID_TITIK": "ANL-BTK-BSM-SIM-001",
+    "UID": "UID-2491",
+    "ID_WEBGIS": "ANL-BTK-BSM-SIM-001",
+    "POV_KE": 3,
+    "LON": 104.03000772,
+    "LAT": 1.12966257,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:01:30.947Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Bandar Sri Mas",
+    "KELURAHAN": "SEI PANAS",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 46
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:01:30.947Z"
   }
  }
 }
