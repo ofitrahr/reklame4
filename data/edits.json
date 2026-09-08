@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T02:48:23.365Z",
+ "updated": "2026-09-08T02:48:43.450Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -297,10 +297,10 @@
   "ANL-LBJ-TER-SIM-002": {
    "op": "update",
    "props": {
-    "JML_POV": 1
+    "JML_POV": 2
    },
    "by": "anonim",
-   "at": "2026-09-08T02:48:17.585Z"
+   "at": "2026-09-08T02:48:37.721Z"
   }
  },
  "pov": {
@@ -2579,6 +2579,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:48:17.585Z"
+  },
+  "NEW-P-3dexk1lljt": {
+   "op": "create",
+   "_pkey": "ANL-LBJ-TER-SIM-002",
+   "geom": [
+    104.00465262,
+    1.14196064
+   ],
+   "props": {
+    "ID_POV": "ANL-LBJ-TER-SIM-002-POV-02",
+    "ID_TITIK": "ANL-LBJ-TER-SIM-002",
+    "UID": "UID-2490",
+    "ID_WEBGIS": "ANL-LBJ-TER-SIM-002",
+    "POV_KE": 2,
+    "LON": 104.00465262,
+    "LAT": 1.14196064,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:48:37.721Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl.Teratai",
+    "KELURAHAN": "BATU SELICIN",
+    "KECAMATAN": "LUBUK BAJA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 29.7
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:48:37.721Z"
   }
  }
 }
