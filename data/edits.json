@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T01:01:11.782Z",
+ "updated": "2026-09-08T01:02:56.683Z",
  "reklame": {
   "ANL-LBJ-BUN-SIM-001": {
    "op": "delete",
@@ -147,6 +147,14 @@
    },
    "by": "anonim",
    "at": "2026-09-08T01:01:06.097Z"
+  },
+  "ANL-NGS-SHA-SIM-002": {
+   "op": "update",
+   "props": {
+    "JML_POV": 3
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:02:52.666Z"
   }
  },
  "pov": {
@@ -582,6 +590,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T01:01:06.097Z"
+  },
+  "NEW-P-nlw2jytloa": {
+   "op": "create",
+   "_pkey": "ANL-NGS-SHA-SIM-002",
+   "geom": [
+    104.1295284,
+    1.04454053
+   ],
+   "props": {
+    "ID_POV": "ANL-NGS-SHA-SIM-002-POV-03",
+    "ID_TITIK": "ANL-NGS-SHA-SIM-002",
+    "UID": "UID-1687",
+    "ID_WEBGIS": "ANL-NGS-SHA-SIM-002",
+    "POV_KE": 3,
+    "LON": 104.1295284,
+    "LAT": 1.04454053,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T01:02:52.666Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Pattimura",
+    "KELURAHAN": "KABIL",
+    "KECAMATAN": "NONGSA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 19.7
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:02:52.666Z"
   }
  }
 }
