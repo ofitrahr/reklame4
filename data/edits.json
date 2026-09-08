@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T02:59:08.519Z",
+ "updated": "2026-09-08T02:59:17.845Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -3397,6 +3397,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:59:05.762Z"
+  },
+  "NEW-P-v9rhlvz922": {
+   "op": "create",
+   "_pkey": "ANL-BAJ-GBR-SIM-004",
+   "geom": [
+    103.98037034,
+    1.04787001
+   ],
+   "props": {
+    "ID_POV": "ANL-BAJ-GBR-SIM-004-POV-04",
+    "ID_TITIK": "ANL-BAJ-GBR-SIM-004",
+    "UID": "UID-2525",
+    "ID_WEBGIS": "ANL-BAJ-GBR-SIM-004",
+    "POV_KE": 4,
+    "LON": 103.98037034,
+    "LAT": 1.04787001,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:59:14.714Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Wan Sarbeni",
+    "KELURAHAN": "Batu Aji",
+    "KECAMATAN": "BATU AJI",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 28.9
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:59:14.714Z"
   }
  }
 }
