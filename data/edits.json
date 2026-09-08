@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T01:44:44.033Z",
+ "updated": "2026-09-08T01:45:53.512Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -49,6 +49,14 @@
    },
    "by": "anonim",
    "at": "2026-09-08T01:44:36.369Z"
+  },
+  "PWK-BTK-JAY-SIM-002": {
+   "op": "update",
+   "props": {
+    "JML_POV": 3
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:45:44.620Z"
   }
  },
  "pov": {
@@ -239,6 +247,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T01:44:38.304Z"
+  },
+  "NEW-P-x0el1ocq7g": {
+   "op": "create",
+   "_pkey": "PWK-BTK-JAY-SIM-002",
+   "geom": [
+    104.0462862,
+    1.11790687
+   ],
+   "props": {
+    "ID_POV": "PWK-BTK-JAY-SIM-002-POV-03",
+    "ID_TITIK": "PWK-BTK-JAY-SIM-002",
+    "UID": "UID-2338",
+    "ID_WEBGIS": "PWK-BTK-JAY-SIM-002",
+    "POV_KE": 3,
+    "LON": 104.0462862,
+    "LAT": 1.11790687,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T01:45:44.620Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Jend. Ahmad Yani",
+    "KELURAHAN": "TELUK TERING",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 49.8
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:45:47.770Z"
   }
  }
 }
