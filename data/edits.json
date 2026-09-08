@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T02:22:43.106Z",
+ "updated": "2026-09-08T02:26:11.264Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -191,6 +191,14 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:22:36.794Z"
+  },
+  "ANL-BTK-JKP-SIM-004": {
+   "op": "update",
+   "props": {
+    "JML_POV": 1
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:26:05.480Z"
   }
  },
  "pov": {
@@ -1396,6 +1404,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:22:36.794Z"
+  },
+  "NEW-P-bgqqltsm5k": {
+   "op": "create",
+   "_pkey": "ANL-BTK-JKP-SIM-004",
+   "geom": [
+    104.09186815,
+    1.12602841
+   ],
+   "props": {
+    "ID_POV": "ANL-BTK-JKP-SIM-004-POV-01",
+    "ID_TITIK": "ANL-BTK-JKP-SIM-004",
+    "UID": "UID-2508",
+    "ID_WEBGIS": "ANL-BTK-JKP-SIM-004",
+    "POV_KE": 1,
+    "LON": 104.09186815,
+    "LAT": 1.12602841,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:26:05.480Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "JL. KAWASAN PERUMAHAN TAMAN RAYA VB",
+    "KELURAHAN": "BELIAN",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 40.1
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:26:05.480Z"
   }
  }
 }
