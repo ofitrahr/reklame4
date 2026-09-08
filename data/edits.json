@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T03:04:39.549Z",
+ "updated": "2026-09-08T03:04:50.201Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -3967,6 +3967,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T03:04:34.706Z"
+  },
+  "NEW-P-ykp05a6dl6": {
+   "op": "create",
+   "_pkey": "ANL-SAG-PTS-SIM-002",
+   "geom": [
+    103.97733182,
+    1.02986185
+   ],
+   "props": {
+    "ID_POV": "ANL-SAG-PTS-SIM-002-POV-04",
+    "ID_TITIK": "ANL-SAG-PTS-SIM-002",
+    "UID": "UID-2512",
+    "ID_WEBGIS": "ANL-SAG-PTS-SIM-002",
+    "POV_KE": 4,
+    "LON": 103.97733182,
+    "LAT": 1.02986185,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T03:04:47.178Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Pasar Tembesi Seken",
+    "KELURAHAN": "SEI LANGKAI",
+    "KECAMATAN": "SAGULUNG",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 38.2
+   },
+   "by": "anonim",
+   "at": "2026-09-08T03:04:47.178Z"
   }
  }
 }
