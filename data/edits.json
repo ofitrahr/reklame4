@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T03:00:07.269Z",
+ "updated": "2026-09-08T03:00:16.135Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -369,10 +369,10 @@
   "ANL-BAJ-BKA-SIM-011": {
    "op": "update",
    "props": {
-    "JML_POV": 1
+    "JML_POV": 3
    },
    "by": "anonim",
-   "at": "2026-09-08T03:00:01.235Z"
+   "at": "2026-09-08T03:00:11.483Z"
   }
  },
  "pov": {
@@ -3463,6 +3463,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T03:00:01.235Z"
+  },
+  "NEW-P-q0ymr10guz": {
+   "op": "create",
+   "_pkey": "ANL-BAJ-BKA-SIM-011",
+   "geom": [
+    103.91131105,
+    1.06971709
+   ],
+   "props": {
+    "ID_POV": "ANL-BAJ-BKA-SIM-011-POV-03",
+    "ID_TITIK": "ANL-BAJ-BKA-SIM-011",
+    "UID": "UID-2440",
+    "ID_WEBGIS": "ANL-BAJ-BKA-SIM-011",
+    "POV_KE": 3,
+    "LON": 103.91131105,
+    "LAT": 1.06971709,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T03:00:11.483Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Brigjen Katamso",
+    "KELURAHAN": "TANJUNG UNCANG",
+    "KECAMATAN": "BATU AJI",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 26
+   },
+   "by": "anonim",
+   "at": "2026-09-08T03:00:11.483Z"
   }
  }
 }
