@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T02:55:15.615Z",
+ "updated": "2026-09-08T02:55:23.957Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -329,10 +329,10 @@
   "ANL-BAJ-GBR-SIM-001": {
    "op": "update",
    "props": {
-    "JML_POV": 1
+    "JML_POV": 2
    },
    "by": "anonim",
-   "at": "2026-09-08T02:55:09.123Z"
+   "at": "2026-09-08T02:55:17.787Z"
   }
  },
  "pov": {
@@ -3017,6 +3017,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:55:09.123Z"
+  },
+  "NEW-P-zpmfhmu68r": {
+   "op": "create",
+   "_pkey": "ANL-BAJ-GBR-SIM-001",
+   "geom": [
+    103.97721439,
+    1.04862853
+   ],
+   "props": {
+    "ID_POV": "ANL-BAJ-GBR-SIM-001-POV-02",
+    "ID_TITIK": "ANL-BAJ-GBR-SIM-001",
+    "UID": "UID-2483",
+    "ID_WEBGIS": "ANL-BAJ-GBR-SIM-001",
+    "POV_KE": 2,
+    "LON": 103.97721439,
+    "LAT": 1.04862853,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:55:17.787Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Wan Sribeni",
+    "KELURAHAN": "BULIANG",
+    "KECAMATAN": "BATU AJI",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 16.3
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:55:17.787Z"
   }
  }
 }
