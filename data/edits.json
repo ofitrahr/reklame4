@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T02:50:29.672Z",
+ "updated": "2026-09-08T02:51:19.521Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -317,6 +317,14 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:50:23.972Z"
+  },
+  "ANL-SKP-GMA-SIM-036": {
+   "op": "update",
+   "props": {
+    "JML_POV": 1
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:51:08.813Z"
   }
  },
  "pov": {
@@ -2798,6 +2806,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:50:23.972Z"
+  },
+  "NEW-P-m7ifx9ou4t": {
+   "op": "create",
+   "_pkey": "ANL-SKP-GMA-SIM-036",
+   "geom": [
+    103.94738549,
+    1.06036316
+   ],
+   "props": {
+    "ID_POV": "ANL-SKP-GMA-SIM-036-POV-01",
+    "ID_TITIK": "ANL-SKP-GMA-SIM-036",
+    "UID": "UID-2486",
+    "ID_WEBGIS": "ANL-SKP-GMA-SIM-036",
+    "POV_KE": 1,
+    "LON": 103.94738549,
+    "LAT": 1.06036316,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:51:08.813Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Graha Mas",
+    "KELURAHAN": "TANJUNG RIAU",
+    "KECAMATAN": "SEKUPANG",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 38.6
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:51:13.462Z"
   }
  }
 }
