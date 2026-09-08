@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T01:41:49.828Z",
+ "updated": "2026-09-08T01:42:29.740Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -33,6 +33,14 @@
    },
    "by": "anonim",
    "at": "2026-09-08T01:41:41.132Z"
+  },
+  "PWK-BTK-H01-SIM-002": {
+   "op": "update",
+   "props": {
+    "JML_POV": 3
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:42:23.366Z"
   }
  },
  "pov": {
@@ -165,6 +173,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T01:41:43.252Z"
+  },
+  "NEW-P-ftaahj8ex2": {
+   "op": "create",
+   "_pkey": "PWK-BTK-H01-SIM-002",
+   "geom": [
+    104.04896826,
+    1.13191246
+   ],
+   "props": {
+    "ID_POV": "PWK-BTK-H01-SIM-002-POV-03",
+    "ID_TITIK": "PWK-BTK-H01-SIM-002",
+    "UID": "UID-2327",
+    "ID_WEBGIS": "PWK-BTK-H01-SIM-002",
+    "POV_KE": 3,
+    "LON": 104.04896826,
+    "LAT": 1.13191246,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T01:42:23.366Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Ibnu Sutowo",
+    "KELURAHAN": "TELUK TERING",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 12.8
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:42:23.366Z"
   }
  }
 }
