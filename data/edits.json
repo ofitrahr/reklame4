@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T02:45:35.902Z",
+ "updated": "2026-09-08T02:45:48.242Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -267,10 +267,10 @@
   "ANL-LBJ-DMN-SIM-001": {
    "op": "update",
    "props": {
-    "JML_POV": 1
+    "JML_POV": 3
    },
    "by": "anonim",
-   "at": "2026-09-08T02:45:27.173Z"
+   "at": "2026-09-08T02:45:48.038Z"
   }
  },
  "pov": {
@@ -2317,6 +2317,64 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:45:30.212Z"
+  },
+  "NEW-P-90gttghu0l": {
+   "op": "create",
+   "_pkey": "ANL-LBJ-DMN-SIM-001",
+   "geom": [
+    104.00105096,
+    1.1385929
+   ],
+   "props": {
+    "ID_POV": "ANL-LBJ-DMN-SIM-001-POV-02",
+    "ID_TITIK": "ANL-LBJ-DMN-SIM-001",
+    "UID": "UID-2487",
+    "ID_WEBGIS": "ANL-LBJ-DMN-SIM-001",
+    "POV_KE": 2,
+    "LON": 104.00105096,
+    "LAT": 1.1385929,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:45:42.069Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Dc Mall - Nagoya Newton",
+    "KELURAHAN": "BATU SELICIN",
+    "KECAMATAN": "LUBUK BAJA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 23.6
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:45:42.069Z"
+  },
+  "NEW-P-vmc5iohyme": {
+   "op": "create",
+   "_pkey": "ANL-LBJ-DMN-SIM-001",
+   "geom": [
+    104.00103389,
+    1.13831797
+   ],
+   "props": {
+    "ID_POV": "ANL-LBJ-DMN-SIM-001-POV-03",
+    "ID_TITIK": "ANL-LBJ-DMN-SIM-001",
+    "UID": "UID-2487",
+    "ID_WEBGIS": "ANL-LBJ-DMN-SIM-001",
+    "POV_KE": 3,
+    "LON": 104.00103389,
+    "LAT": 1.13831797,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:45:48.038Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Dc Mall - Nagoya Newton",
+    "KELURAHAN": "BATU SELICIN",
+    "KECAMATAN": "LUBUK BAJA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 13.2
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:45:48.038Z"
   }
  }
 }
