@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T03:02:13.068Z",
+ "updated": "2026-09-08T03:02:41.570Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -389,6 +389,14 @@
    },
    "by": "anonim",
    "at": "2026-09-08T03:02:09.670Z"
+  },
+  "ANL-SAG-PSP-SIM-002": {
+   "op": "update",
+   "props": {
+    "JML_POV": 1
+   },
+   "by": "anonim",
+   "at": "2026-09-08T03:02:35.694Z"
   }
  },
  "pov": {
@@ -3711,6 +3719,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T03:02:09.670Z"
+  },
+  "NEW-P-tuyt883k4u": {
+   "op": "create",
+   "_pkey": "ANL-SAG-PSP-SIM-002",
+   "geom": [
+    103.95208243,
+    1.04746042
+   ],
+   "props": {
+    "ID_POV": "ANL-SAG-PSP-SIM-002-POV-01",
+    "ID_TITIK": "ANL-SAG-PSP-SIM-002",
+    "UID": "UID-2505",
+    "ID_WEBGIS": "ANL-SAG-PSP-SIM-002",
+    "POV_KE": 1,
+    "LON": 103.95208243,
+    "LAT": 1.04746042,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T03:02:35.694Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Perum Sagulung Permai",
+    "KELURAHAN": "SAGULUNG KOTA",
+    "KECAMATAN": "SAGULUNG",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 14
+   },
+   "by": "anonim",
+   "at": "2026-09-08T03:02:35.694Z"
   }
  }
 }
