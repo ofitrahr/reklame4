@@ -32,7 +32,9 @@ TEKNIS = [
     ("JENIS", "Jenis"),
     ("TIPE", "Tipe"),
     ("TIPE_MEDIA", "Tipe Media"),
-    ("UKR_MEDIA", "Dimensi Ukuran"),
+    # Sumbernya "Ukuran usulan studi (terbesar se-kelompok)" pada kertas kerja.
+    # Kolom "Ukuran bidang" di sana hanya merujuk ke kolom ini.
+    ("UKR_STUDI", "Dimensi Ukuran"),
     ("MNMPL_STR", "Bentuk (menempel struktur)"),
     ("JML_MUKA", "Jumlah Muka"),
     ("NAMA_JALAN", "Nama Jalan"),
