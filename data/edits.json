@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T02:08:57.507Z",
+ "updated": "2026-09-08T02:09:11.784Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -141,10 +141,10 @@
   "ANL-BTK-GUR-SIM-001": {
    "op": "update",
    "props": {
-    "JML_POV": 1
+    "JML_POV": 3
    },
    "by": "anonim",
-   "at": "2026-09-08T02:08:51.821Z"
+   "at": "2026-09-08T02:09:05.798Z"
   }
  },
  "pov": {
@@ -886,6 +886,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:08:51.821Z"
+  },
+  "NEW-P-93zjej6rd2": {
+   "op": "create",
+   "_pkey": "ANL-BTK-GUR-SIM-001",
+   "geom": [
+    104.04584126,
+    1.12832291
+   ],
+   "props": {
+    "ID_POV": "ANL-BTK-GUR-SIM-001-POV-03",
+    "ID_TITIK": "ANL-BTK-GUR-SIM-001",
+    "UID": "UID-2493",
+    "ID_WEBGIS": "ANL-BTK-GUR-SIM-001",
+    "POV_KE": 3,
+    "LON": 104.04584126,
+    "LAT": 1.12832291,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:09:05.798Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Gurindam 2",
+    "KELURAHAN": "TELUK TERING",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 5.9
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:09:05.798Z"
   }
  }
 }
