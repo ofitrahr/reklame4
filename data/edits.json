@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T00:53:55.200Z",
+ "updated": "2026-09-08T01:01:11.782Z",
  "reklame": {
   "ANL-LBJ-BUN-SIM-001": {
    "op": "delete",
@@ -139,6 +139,14 @@
    },
    "by": "anonim",
    "at": "2026-09-08T00:53:52.205Z"
+  },
+  "ANL-NGS-HLK-SIM-010": {
+   "op": "update",
+   "props": {
+    "JML_POV": 3
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:01:06.097Z"
   }
  },
  "pov": {
@@ -545,6 +553,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T00:53:52.205Z"
+  },
+  "NEW-P-iuowpfrbg1": {
+   "op": "create",
+   "_pkey": "ANL-NGS-HLK-SIM-010",
+   "geom": [
+    104.08233225,
+    1.16794334
+   ],
+   "props": {
+    "ID_POV": "ANL-NGS-HLK-SIM-010-POV-03",
+    "ID_TITIK": "ANL-NGS-HLK-SIM-010",
+    "UID": "UID-1554",
+    "ID_WEBGIS": "ANL-NGS-HLK-SIM-010",
+    "POV_KE": 3,
+    "LON": 104.08233225,
+    "LAT": 1.16794334,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T01:01:06.097Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Hang Lekiu",
+    "KELURAHAN": "SAMBAU",
+    "KECAMATAN": "NONGSA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 71.2
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:01:06.097Z"
   }
  }
 }
