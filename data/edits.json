@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T01:45:53.512Z",
+ "updated": "2026-09-08T01:46:54.537Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -57,6 +57,14 @@
    },
    "by": "anonim",
    "at": "2026-09-08T01:45:44.620Z"
+  },
+  "PWK-BTK-ABU-SIM-002": {
+   "op": "update",
+   "props": {
+    "JML_POV": 3
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:46:48.829Z"
   }
  },
  "pov": {
@@ -276,6 +284,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T01:45:47.770Z"
+  },
+  "NEW-P-ldd2yee3r1": {
+   "op": "create",
+   "_pkey": "PWK-BTK-ABU-SIM-002",
+   "geom": [
+    104.07914001,
+    1.10702237
+   ],
+   "props": {
+    "ID_POV": "PWK-BTK-ABU-SIM-002-POV-03",
+    "ID_TITIK": "PWK-BTK-ABU-SIM-002",
+    "UID": "UID-2320",
+    "ID_WEBGIS": "PWK-BTK-ABU-SIM-002",
+    "POV_KE": 3,
+    "LON": 104.07914001,
+    "LAT": 1.10702237,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T01:46:48.829Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Selasih",
+    "KELURAHAN": "BELIAN",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 28.8
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:46:48.829Z"
   }
  }
 }
