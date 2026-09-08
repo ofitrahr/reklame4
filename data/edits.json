@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T02:50:18.623Z",
+ "updated": "2026-09-08T02:50:29.672Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -313,10 +313,10 @@
   "ANL-LBJ-PEM-SIM-024": {
    "op": "update",
    "props": {
-    "JML_POV": 2
+    "JML_POV": 3
    },
    "by": "anonim",
-   "at": "2026-09-08T02:50:12.292Z"
+   "at": "2026-09-08T02:50:23.972Z"
   }
  },
  "pov": {
@@ -2769,6 +2769,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:50:12.292Z"
+  },
+  "NEW-P-ev2ulonvj8": {
+   "op": "create",
+   "_pkey": "ANL-LBJ-PEM-SIM-024",
+   "geom": [
+    104.00802702,
+    1.13505004
+   ],
+   "props": {
+    "ID_POV": "ANL-LBJ-PEM-SIM-024-POV-03",
+    "ID_TITIK": "ANL-LBJ-PEM-SIM-024",
+    "UID": "UID-2527",
+    "ID_WEBGIS": "ANL-LBJ-PEM-SIM-024",
+    "POV_KE": 3,
+    "LON": 104.00802702,
+    "LAT": 1.13505004,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:50:23.972Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Pembangunan",
+    "KELURAHAN": "BATU SELICIN",
+    "KECAMATAN": "LUBUK BAJA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 48.8
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:50:23.972Z"
   }
  }
 }
