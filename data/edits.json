@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T02:42:09.052Z",
+ "updated": "2026-09-08T02:42:41.196Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -1995,6 +1995,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:42:02.520Z"
+  },
+  "NEW-P-w269m6dtog": {
+   "op": "create",
+   "_pkey": "ANL-BTK-JKP-SIM-002",
+   "geom": [
+    104.09959208,
+    1.12643138
+   ],
+   "props": {
+    "ID_POV": "ANL-BTK-JKP-SIM-002-POV-04",
+    "ID_TITIK": "ANL-BTK-JKP-SIM-002",
+    "UID": "UID-2499",
+    "ID_WEBGIS": "ANL-BTK-JKP-SIM-002",
+    "POV_KE": 4,
+    "LON": 104.09959208,
+    "LAT": 1.12643138,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:42:35.008Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "JL. KAWASAN PERUMAHAN BOTANIA GARDEN",
+    "KELURAHAN": "BELIAN",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 11.5
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:42:35.008Z"
   }
  }
 }
