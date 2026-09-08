@@ -1,5 +1,5 @@
 {
-  "generated": "tools/hitung_pov.py",
+  "generated": "tools/join_tarif.py",
   "groups": {
     "identitas": "Identitas & Sumber",
     "lokasi": "Lokasi & Jalan",
@@ -1101,6 +1101,42 @@
         "type": "number",
         "group": "pov",
         "filled": 291,
+        "total": 2482,
+        "options": null
+      },
+      {
+        "name": "SEWA_NSA",
+        "label": "Sewa NS A (Rp/th)",
+        "type": "integer",
+        "group": "sewa",
+        "filled": 2482,
+        "total": 2482,
+        "options": null
+      },
+      {
+        "name": "SEWA_NSB",
+        "label": "Sewa NS B (Rp/th)",
+        "type": "integer",
+        "group": "sewa",
+        "filled": 2482,
+        "total": 2482,
+        "options": null
+      },
+      {
+        "name": "SEWA_NSC",
+        "label": "Sewa NS C (Rp/th)",
+        "type": "integer",
+        "group": "sewa",
+        "filled": 2482,
+        "total": 2482,
+        "options": null
+      },
+      {
+        "name": "SEWA_NSD",
+        "label": "Sewa NS D (Rp/th)",
+        "type": "integer",
+        "group": "sewa",
+        "filled": 2482,
         "total": 2482,
         "options": null
       },
