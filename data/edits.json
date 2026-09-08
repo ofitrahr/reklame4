@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T02:44:27.390Z",
+ "updated": "2026-09-08T02:44:45.880Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -259,10 +259,10 @@
   "ANL-LBJ-UFC-SIM-003": {
    "op": "update",
    "props": {
-    "JML_POV": 1
+    "JML_POV": 3
    },
    "by": "anonim",
-   "at": "2026-09-08T02:44:21.132Z"
+   "at": "2026-09-08T02:44:39.396Z"
   }
  },
  "pov": {
@@ -2222,6 +2222,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:44:21.132Z"
+  },
+  "NEW-P-x7amesghnn": {
+   "op": "create",
+   "_pkey": "ANL-LBJ-UFC-SIM-003",
+   "geom": [
+    104.00597915,
+    1.14834445
+   ],
+   "props": {
+    "ID_POV": "ANL-LBJ-UFC-SIM-003-POV-03",
+    "ID_TITIK": "ANL-LBJ-UFC-SIM-003",
+    "UID": "UID-2506",
+    "ID_WEBGIS": "ANL-LBJ-UFC-SIM-003",
+    "POV_KE": 3,
+    "LON": 104.00597915,
+    "LAT": 1.14834445,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:44:39.395Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Utama Food Court - Tos 3000",
+    "KELURAHAN": "LUBUK BAJA KOTA",
+    "KECAMATAN": "LUBUK BAJA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 9.9
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:44:39.395Z"
   }
  }
 }
