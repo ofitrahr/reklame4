@@ -1,6 +1,45 @@
 {
-  "v": 1,
-  "updated": null,
-  "reklame": {},
-  "pov": {}
+ "v": 1,
+ "updated": "2026-09-08T01:34:16.222Z",
+ "reklame": {
+  "PWK-BTK-H01-SIM-001": {
+   "op": "update",
+   "props": {
+    "JML_POV": 3
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:34:08.810Z"
+  }
+ },
+ "pov": {
+  "NEW-P-txe27wxtbd": {
+   "op": "create",
+   "_pkey": "PWK-BTK-H01-SIM-001",
+   "geom": [
+    104.04736429,
+    1.13001922
+   ],
+   "props": {
+    "ID_POV": "PWK-BTK-H01-SIM-001-POV-03",
+    "ID_TITIK": "PWK-BTK-H01-SIM-001",
+    "UID": "UID-2326",
+    "ID_WEBGIS": "PWK-BTK-H01-SIM-001",
+    "POV_KE": 3,
+    "LON": 104.04736429,
+    "LAT": 1.13001922,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T01:34:08.810Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Engku Putri",
+    "KELURAHAN": "TELUK TERING",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Bersinyal",
+    "JARAK_M": 22.7
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:34:08.810Z"
+  }
+ }
 }
