@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T01:48:51.679Z",
+ "updated": "2026-09-08T01:49:18.704Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -89,6 +89,14 @@
    },
    "by": "anonim",
    "at": "2026-09-08T01:48:43.367Z"
+  },
+  "ANL-SKP-TKO-SIM-001": {
+   "op": "update",
+   "props": {
+    "JML_POV": 3
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:49:12.368Z"
   }
  },
  "pov": {
@@ -424,6 +432,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T01:48:43.367Z"
+  },
+  "NEW-P-fkaelkh6i8": {
+   "op": "create",
+   "_pkey": "ANL-SKP-TKO-SIM-001",
+   "geom": [
+    103.96075577,
+    1.09889806
+   ],
+   "props": {
+    "ID_POV": "ANL-SKP-TKO-SIM-001-POV-03",
+    "ID_TITIK": "ANL-SKP-TKO-SIM-001",
+    "UID": "UID-2311",
+    "ID_WEBGIS": "ANL-SKP-TKO-SIM-001",
+    "POV_KE": 3,
+    "LON": 103.96075577,
+    "LAT": 1.09889806,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T01:49:12.368Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Diponegoro",
+    "KELURAHAN": "TIBAN BARU",
+    "KECAMATAN": "SEKUPANG",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 11.8
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:49:12.368Z"
   }
  }
 }
