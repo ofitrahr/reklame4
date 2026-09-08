@@ -615,7 +615,7 @@
         "label": "Sewa NS A (Rp/th)",
         "type": "integer",
         "group": "sewa",
-        "filled": 2482,
+        "filled": 1566,
         "total": 2482,
         "options": null
       },
@@ -651,7 +651,7 @@
         "label": "Sewa NS C (Rp/th)",
         "type": "integer",
         "group": "sewa",
-        "filled": 2482,
+        "filled": 1566,
         "total": 2482,
         "options": null
       },
@@ -681,7 +681,7 @@
         "label": "Batas atas NS A",
         "type": "text",
         "group": "sewa",
-        "filled": 2482,
+        "filled": 1566,
         "total": 2482,
         "options": [
           "LOLOS",
@@ -729,7 +729,7 @@
         "label": "Batas atas NS C",
         "type": "text",
         "group": "sewa",
-        "filled": 2482,
+        "filled": 1566,
         "total": 2482,
         "options": [
           "LOLOS",
@@ -775,7 +775,7 @@
         "label": "Bagian sewa BP",
         "type": "number",
         "group": "sewa",
-        "filled": 2398,
+        "filled": 2404,
         "total": 2482,
         "options": null
       },
@@ -784,7 +784,7 @@
         "label": "Bagian pajak Pemko",
         "type": "number",
         "group": "sewa",
-        "filled": 2398,
+        "filled": 2404,
         "total": 2482,
         "options": null
       },
@@ -1005,7 +1005,7 @@
         "label": "CPM wajib NS A",
         "type": "number",
         "group": "sewa",
-        "filled": 2372,
+        "filled": 1463,
         "total": 2482,
         "options": null
       },
@@ -1041,7 +1041,7 @@
         "label": "CPM wajib NS C",
         "type": "number",
         "group": "sewa",
-        "filled": 2372,
+        "filled": 1463,
         "total": 2482,
         "options": null
       },
@@ -1068,7 +1068,7 @@
         "label": "Status kisaran NS A",
         "type": "number",
         "group": "sewa",
-        "filled": 2372,
+        "filled": 1463,
         "total": 2482,
         "options": null
       },
@@ -1104,7 +1104,7 @@
         "label": "Status kisaran NS C",
         "type": "number",
         "group": "sewa",
-        "filled": 2372,
+        "filled": 1463,
         "total": 2482,
         "options": null
       },
@@ -1135,7 +1135,7 @@
         "label": "Status NS A",
         "type": "text",
         "group": "sewa",
-        "filled": 2372,
+        "filled": 1463,
         "total": 2482,
         "options": [
           "KETAT",
@@ -1187,7 +1187,7 @@
         "label": "Status NS C",
         "type": "text",
         "group": "sewa",
-        "filled": 2372,
+        "filled": 1463,
         "total": 2482,
         "options": [
           "KETAT",
