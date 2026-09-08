@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T02:28:23.627Z",
+ "updated": "2026-09-08T02:28:58.815Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -215,6 +215,14 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:28:23.196Z"
+  },
+  "ANL-BTK-RHU-SIM-002": {
+   "op": "update",
+   "props": {
+    "JML_POV": 2
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:28:53.156Z"
   }
  },
  "pov": {
@@ -1681,6 +1689,64 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:28:23.196Z"
+  },
+  "NEW-P-i3s4z1w3pv": {
+   "op": "create",
+   "_pkey": "ANL-BTK-RHU-SIM-002",
+   "geom": [
+    104.06186432,
+    1.10887938
+   ],
+   "props": {
+    "ID_POV": "ANL-BTK-RHU-SIM-002-POV-01",
+    "ID_TITIK": "ANL-BTK-RHU-SIM-002",
+    "UID": "UID-2510",
+    "ID_WEBGIS": "ANL-BTK-RHU-SIM-002",
+    "POV_KE": 1,
+    "LON": 104.06186432,
+    "LAT": 1.10887938,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:28:48.211Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Raja M. Husin",
+    "KELURAHAN": "BALOI PERMAI",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 34.8
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:28:48.212Z"
+  },
+  "NEW-P-m5d97kw7j8": {
+   "op": "create",
+   "_pkey": "ANL-BTK-RHU-SIM-002",
+   "geom": [
+    104.06190723,
+    1.10866486
+   ],
+   "props": {
+    "ID_POV": "ANL-BTK-RHU-SIM-002-POV-02",
+    "ID_TITIK": "ANL-BTK-RHU-SIM-002",
+    "UID": "UID-2510",
+    "ID_WEBGIS": "ANL-BTK-RHU-SIM-002",
+    "POV_KE": 2,
+    "LON": 104.06190723,
+    "LAT": 1.10866486,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:28:53.156Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Raja M. Husin",
+    "KELURAHAN": "BALOI PERMAI",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 32.2
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:28:53.156Z"
   }
  }
 }
