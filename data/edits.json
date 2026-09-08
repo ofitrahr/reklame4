@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T02:28:14.667Z",
+ "updated": "2026-09-08T02:28:23.627Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -211,10 +211,10 @@
   "ANL-BTK-UPH-SIM-002": {
    "op": "update",
    "props": {
-    "JML_POV": 1
+    "JML_POV": 3
    },
    "by": "anonim",
-   "at": "2026-09-08T02:28:08.722Z"
+   "at": "2026-09-08T02:28:23.196Z"
   }
  },
  "pov": {
@@ -1623,6 +1623,64 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:28:08.722Z"
+  },
+  "NEW-P-6hr6w1vfq3": {
+   "op": "create",
+   "_pkey": "ANL-BTK-UPH-SIM-002",
+   "geom": [
+    104.05718298,
+    1.10336068
+   ],
+   "props": {
+    "ID_POV": "ANL-BTK-UPH-SIM-002-POV-02",
+    "ID_TITIK": "ANL-BTK-UPH-SIM-002",
+    "UID": "UID-2497",
+    "ID_WEBGIS": "ANL-BTK-UPH-SIM-002",
+    "POV_KE": 2,
+    "LON": 104.05718298,
+    "LAT": 1.10336068,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:28:17.115Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Pemuda",
+    "KELURAHAN": "BALOI PERMAI",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 17.9
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:28:17.115Z"
+  },
+  "NEW-P-sii7w6vkf0": {
+   "op": "create",
+   "_pkey": "ANL-BTK-UPH-SIM-002",
+   "geom": [
+    104.05704263,
+    1.10347824
+   ],
+   "props": {
+    "ID_POV": "ANL-BTK-UPH-SIM-002-POV-03",
+    "ID_TITIK": "ANL-BTK-UPH-SIM-002",
+    "UID": "UID-2497",
+    "ID_WEBGIS": "ANL-BTK-UPH-SIM-002",
+    "POV_KE": 3,
+    "LON": 104.05704263,
+    "LAT": 1.10347824,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:28:23.196Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Pemuda",
+    "KELURAHAN": "BALOI PERMAI",
+    "KECAMATAN": "BATAM KOTA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 10.5
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:28:23.196Z"
   }
  }
 }
