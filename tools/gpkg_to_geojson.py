@@ -144,6 +144,22 @@ def ekstrak(path, tabel, id_field):
     return cols, feats
 
 
+def afinitas(decl):
+    """
+    Terjemahkan tipe kolom SQLite menjadi tipe isian di WebGIS, mengikuti
+    aturan afinitas SQLite. Penting karena GeoPackage buatan QGIS memakai
+    nama seperti MEDIUMINT dan DOUBLE, bukan sekadar INTEGER atau REAL.
+    """
+    d = (decl or "").upper()
+    if "INT" in d:
+        return "integer"
+    if "CHAR" in d or "CLOB" in d or "TEXT" in d:
+        return "text"
+    if "REAL" in d or "FLOA" in d or "DOUB" in d or "NUM" in d or "DEC" in d:
+        return "number"
+    return "text"
+
+
 def bangun_skema(cols, feats, kamus):
     """Daftar definisi kolom: tipe, label, grup, dan opsi dropdown."""
     out = []
@@ -153,12 +169,7 @@ def bangun_skema(cols, feats, kamus):
             continue
         vals = [f["properties"].get(nama) for f in feats]
         isi = [v for v in vals if v is not None]
-        if decl.startswith("INT"):
-            tipe = "integer"
-        elif decl.startswith(("REAL", "DOUBLE", "FLOAT", "NUM")):
-            tipe = "number"
-        else:
-            tipe = "text"
+        tipe = afinitas(decl)
         # opsi dropdown untuk teks berkardinalitas rendah
         opsi = None
         if tipe == "text" and isi:

@@ -17,7 +17,7 @@
       {
         "name": "fid",
         "label": "Fid",
-        "type": "number",
+        "type": "integer",
         "group": "identitas",
         "filled": 2482,
         "total": 2482,
@@ -26,7 +26,7 @@
       {
         "name": "id",
         "label": "Id",
-        "type": "number",
+        "type": "text",
         "group": "lainnya",
         "filled": 2482,
         "total": 2482,
@@ -35,7 +35,7 @@
       {
         "name": "FID_ASLI",
         "label": "Fid Asli",
-        "type": "number",
+        "type": "integer",
         "group": "identitas",
         "filled": 2480,
         "total": 2482,
@@ -44,7 +44,7 @@
       {
         "name": "UID",
         "label": "Uid",
-        "type": "number",
+        "type": "text",
         "group": "identitas",
         "filled": 2482,
         "total": 2482,
@@ -53,7 +53,7 @@
       {
         "name": "ID_TITIK",
         "label": "ID Titik",
-        "type": "number",
+        "type": "text",
         "group": "identitas",
         "filled": 2482,
         "total": 2482,
@@ -62,20 +62,28 @@
       {
         "name": "SUMBER",
         "label": "Sumber",
-        "type": "number",
+        "type": "text",
         "group": "identitas",
         "filled": 2482,
         "total": 2482,
-        "options": null
+        "options": [
+          "Analisis",
+          "Perwako"
+        ]
       },
       {
         "name": "KEWENANGAN",
         "label": "Kewenangan",
-        "type": "number",
+        "type": "text",
         "group": "identitas",
         "filled": 2482,
         "total": 2482,
-        "options": null
+        "options": [
+          "BANNER VERTIKAL - DIKECUALIKAN",
+          "BMD Pemko",
+          "BMD Pemprov",
+          "BP Batam"
+        ]
       },
       {
         "name": "LONG",
@@ -98,7 +106,7 @@
       {
         "name": "NAMA_JALAN",
         "label": "Nama jalan",
-        "type": "number",
+        "type": "text",
         "group": "lokasi",
         "filled": 2482,
         "total": 2482,
@@ -107,11 +115,15 @@
       {
         "name": "KELAS_JLN",
         "label": "Kelas Jln",
-        "type": "number",
+        "type": "text",
         "group": "lokasi",
         "filled": 2482,
         "total": 2482,
-        "options": null
+        "options": [
+          "Arteri",
+          "Kolektor",
+          "Lokal"
+        ]
       },
       {
         "name": "ROW_JALAN",
@@ -125,7 +137,7 @@
       {
         "name": "KELURAHAN",
         "label": "Kelurahan",
-        "type": "number",
+        "type": "text",
         "group": "lokasi",
         "filled": 2482,
         "total": 2482,
@@ -134,79 +146,130 @@
       {
         "name": "KECAMATAN",
         "label": "Kecamatan",
-        "type": "number",
+        "type": "text",
         "group": "lokasi",
         "filled": 2482,
         "total": 2482,
-        "options": null
+        "options": [
+          "BATAM KOTA",
+          "BATU AJI",
+          "BATU AMPAR",
+          "BENGKONG",
+          "LUBUK BAJA",
+          "NONGSA",
+          "SAGULUNG",
+          "SEI BEDUK",
+          "SEKUPANG"
+        ]
       },
       {
         "name": "KOTA_KAB",
         "label": "Kota Kab",
-        "type": "number",
+        "type": "text",
         "group": "lokasi",
         "filled": 2482,
         "total": 2482,
-        "options": null
+        "options": [
+          "KOTA BATAM"
+        ]
       },
       {
         "name": "STATUS_WPP",
         "label": "Sub wilayah SK 321",
-        "type": "number",
+        "type": "text",
         "group": "lokasi",
         "filled": 2482,
         "total": 2482,
-        "options": null
+        "options": [
+          "Batam Centre - Core",
+          "Batam Centre - Kelurahan",
+          "Batu Ampar - Muka Kuning",
+          "Batu Ampar - Nagoya",
+          "Batu Ampar - Sei Panas",
+          "Pantai Timur - Kabil",
+          "Pantai Timur - Nongsa",
+          "Pantai Timur - Tanjung Piayu",
+          "Sekupang - Sekupang",
+          "Sekupang - Tanjung Uncang dan Sagulung"
+        ]
       },
       {
         "name": "TIPE_KWSN",
         "label": "Tipe kawasan",
-        "type": "number",
+        "type": "text",
         "group": "lokasi",
         "filled": 2482,
         "total": 2482,
-        "options": null
+        "options": [
+          "TIPE A",
+          "TIPE B"
+        ]
       },
       {
         "name": "JENIS",
         "label": "Jenis",
-        "type": "number",
+        "type": "text",
         "group": "lokasi",
         "filled": 2482,
         "total": 2482,
-        "options": null
+        "options": [
+          "Koridor",
+          "Pedestrian",
+          "Persimpangan"
+        ]
       },
       {
         "name": "TIPE",
         "label": "Tipe",
-        "type": "number",
+        "type": "text",
         "group": "lokasi",
         "filled": 2482,
         "total": 2482,
-        "options": null
+        "options": [
+          "Banner Vertikal",
+          "Free Standing",
+          "Halte",
+          "JPO",
+          "Pole Light",
+          "Simpang Bersinyal",
+          "Simpang Tak Bersinyal",
+          "Sisi Jalan"
+        ]
       },
       {
         "name": "TIPE_MEDIA",
         "label": "Media",
-        "type": "number",
+        "type": "text",
         "group": "media",
         "filled": 2482,
         "total": 2482,
-        "options": null
+        "options": [
+          "Neon Box",
+          "Videotron"
+        ]
       },
       {
         "name": "UKR_MEDIA",
         "label": "Ukuran bidang",
-        "type": "number",
+        "type": "text",
         "group": "media",
         "filled": 1657,
         "total": 2482,
-        "options": null
+        "options": [
+          "1 x 3 m",
+          "2 x 4 m",
+          "3 x 6 m",
+          "4 x 8 m",
+          "5 x 10 m",
+          "6 x 12 m",
+          "8 x 16 m",
+          "terikat struktur"
+        ]
       },
       {
         "name": "LUAS_MEDIA",
         "label": "Luas bidang m2",
-        "type": "number",
+        "type": "integer",
         "group": "media",
         "filled": 1652,
         "total": 2482,
@@ -224,7 +287,7 @@
       {
         "name": "JML_MUKA",
         "label": "Jumlah muka",
-        "type": "number",
+        "type": "integer",
         "group": "media",
         "filled": 2480,
         "total": 2482,
@@ -233,11 +296,15 @@
       {
         "name": "KEL_TINGGI",
         "label": "Kelompok ketinggian",
-        "type": "number",
+        "type": "text",
         "group": "media",
         "filled": 2480,
         "total": 2482,
-        "options": null
+        "options": [
+          "0-10m",
+          "10-20m",
+          "20-30m"
+        ]
       },
       {
         "name": "JPAND_MED",
@@ -251,7 +318,7 @@
       {
         "name": "JPAND_JAUH",
         "label": "Jpand Jauh",
-        "type": "number",
+        "type": "text",
         "group": "media",
         "filled": 284,
         "total": 2482,
@@ -260,7 +327,7 @@
       {
         "name": "LUAS_LAHAN",
         "label": "Luas tapak m2",
-        "type": "number",
+        "type": "integer",
         "group": "media",
         "filled": 2480,
         "total": 2482,
@@ -296,16 +363,19 @@
       {
         "name": "KELAS_PREM",
         "label": "Kelas premium",
-        "type": "number",
+        "type": "text",
         "group": "skoring",
         "filled": 2480,
         "total": 2482,
-        "options": null
+        "options": [
+          "PREMIUM",
+          "STANDAR"
+        ]
       },
       {
         "name": "VOL_KEND",
         "label": "VOL kend/jam",
-        "type": "number",
+        "type": "integer",
         "group": "skoring",
         "filled": 2480,
         "total": 2482,
@@ -314,61 +384,93 @@
       {
         "name": "REVISI_BP",
         "label": "Revisi Bp",
-        "type": "number",
+        "type": "text",
         "group": "identitas",
         "filled": 2469,
         "total": 2482,
-        "options": null
+        "options": [
+          "TIDAK",
+          "YA"
+        ]
       },
       {
         "name": "JENIS_EDIT",
         "label": "Jenis Edit",
-        "type": "number",
+        "type": "text",
         "group": "identitas",
         "filled": 2471,
         "total": 2482,
-        "options": null
+        "options": [
+          "tambah",
+          "tetap"
+        ]
       },
       {
         "name": "layer",
         "label": "Layer",
-        "type": "number",
+        "type": "text",
         "group": "identitas",
         "filled": 2474,
         "total": 2482,
-        "options": null
+        "options": [
+          "13 titik simpang lengkap — titik_reklame_terbaru___ver_20260906_1021_master__koridor__simpang_neonbox__titik_reklame",
+          "Tipe Reklame"
+        ]
       },
       {
         "name": "path",
         "label": "Path",
-        "type": "number",
+        "type": "text",
         "group": "identitas",
         "filled": 2474,
         "total": 2482,
-        "options": null
+        "options": [
+          "/Users/user/Documents/PROJECT 2026/02 Reklame/Final/13 titik simpang lengkap.gpkg|layername=titik_reklame_terbaru___ver_20260906_1021_master__koridor__simpang_neonbox__titik_reklame",
+          "/Users/user/Documents/PROJECT 2026/02 Reklame/Final/Titik Reklame Terbaru _ VER 20260906 02.30 (master + koridor baru).gpkg|layername=titik_reklame"
+        ]
       },
       {
         "name": "KLS_LOKASI",
         "label": "Kelas lokasi",
-        "type": "number",
+        "type": "text",
         "group": "lokasi",
         "filled": 2480,
         "total": 2482,
-        "options": null
+        "options": [
+          "Halte - Arteri",
+          "Halte - Kolektor",
+          "JPO - Arteri",
+          "JPO - Kolektor",
+          "Koridor - Arteri",
+          "Koridor - Kolektor",
+          "Koridor - Lokal",
+          "Pedestrian - Arteri",
+          "Pedestrian - Kolektor",
+          "Pedestrian - Lokal",
+          "Simpang Bersinyal - Arteri",
+          "Simpang Bersinyal - Kolektor",
+          "Simpang Bersinyal - Lokal",
+          "Simpang Tak Bersinyal - Arteri",
+          "Simpang Tak Bersinyal - Kolektor",
+          "Simpang Tak Bersinyal - Lokal"
+        ]
       },
       {
         "name": "MNMPL_STR",
         "label": "Menempel struktur",
-        "type": "number",
+        "type": "text",
         "group": "media",
         "filled": 2480,
         "total": 2482,
-        "options": null
+        "options": [
+          "Tidak",
+          "Ya"
+        ]
       },
       {
         "name": "DASAR_UKR",
         "label": "Dasar ukuran",
-        "type": "number",
+        "type": "text",
         "group": "media",
         "filled": 2480,
         "total": 2482,
@@ -377,7 +479,7 @@
       {
         "name": "LEBAR_BDG",
         "label": "Lebar bidang W m",
-        "type": "number",
+        "type": "integer",
         "group": "media",
         "filled": 1567,
         "total": 2482,
@@ -395,7 +497,7 @@
       {
         "name": "NJOP_TNH",
         "label": "NJOP tanah Rp/m2",
-        "type": "number",
+        "type": "integer",
         "group": "tarif",
         "filled": 2480,
         "total": 2482,
@@ -404,16 +506,21 @@
       {
         "name": "SUMBER_NJ",
         "label": "Sumber NJOP",
-        "type": "number",
+        "type": "text",
         "group": "tarif",
         "filled": 2480,
         "total": 2482,
-        "options": null
+        "options": [
+          "MEDIAN KECAMATAN",
+          "MEDIAN KELURAHAN",
+          "RUAS SE-KECAMATAN",
+          "RUAS SE-KELURAHAN"
+        ]
       },
       {
         "name": "UWT_KOM",
         "label": "UWT komersial Rp/m2",
-        "type": "number",
+        "type": "integer",
         "group": "tarif",
         "filled": 2477,
         "total": 2482,
@@ -422,7 +529,7 @@
       {
         "name": "TRF_NS_HR",
         "label": "Tarif NS Rp/m2/hari",
-        "type": "number",
+        "type": "integer",
         "group": "tarif",
         "filled": 2480,
         "total": 2482,
@@ -458,7 +565,7 @@
       {
         "name": "NJOP_MED",
         "label": "NJOP media Rp/m2",
-        "type": "number",
+        "type": "integer",
         "group": "tarif",
         "filled": 2480,
         "total": 2482,
@@ -467,7 +574,7 @@
       {
         "name": "NSR_PENUH",
         "label": "NSR penuh Rp/th",
-        "type": "number",
+        "type": "integer",
         "group": "tarif",
         "filled": 2480,
         "total": 2482,
@@ -476,7 +583,7 @@
       {
         "name": "PJK_RKLM",
         "label": "Pajak Reklame Rp/th",
-        "type": "number",
+        "type": "integer",
         "group": "tarif",
         "filled": 2480,
         "total": 2482,
@@ -485,7 +592,7 @@
       {
         "name": "PENYUSUT",
         "label": "Penyusutan Rp/th",
-        "type": "number",
+        "type": "integer",
         "group": "tarif",
         "filled": 2480,
         "total": 2482,
@@ -548,7 +655,7 @@
       {
         "name": "PMLHRAAN",
         "label": "Pemeliharaan Rp/th",
-        "type": "number",
+        "type": "integer",
         "group": "listrik",
         "filled": 2480,
         "total": 2482,
@@ -557,7 +664,7 @@
       {
         "name": "ASURANSI",
         "label": "Asuransi Rp/th",
-        "type": "number",
+        "type": "integer",
         "group": "listrik",
         "filled": 2480,
         "total": 2482,
@@ -566,7 +673,7 @@
       {
         "name": "PERIZINAN",
         "label": "Perizinan teramortisasi Rp/th",
-        "type": "number",
+        "type": "integer",
         "group": "listrik",
         "filled": 2480,
         "total": 2482,
@@ -584,7 +691,7 @@
       {
         "name": "PITA_CPMB",
         "label": "Pita CPM bawah",
-        "type": "number",
+        "type": "integer",
         "group": "sewa",
         "filled": 2480,
         "total": 2482,
@@ -593,7 +700,7 @@
       {
         "name": "PITA_CPMA",
         "label": "Pita CPM atas",
-        "type": "number",
+        "type": "integer",
         "group": "sewa",
         "filled": 2480,
         "total": 2482,
@@ -602,7 +709,7 @@
       {
         "name": "SEWA_NS1",
         "label": "SEWA NS 1",
-        "type": "number",
+        "type": "integer",
         "group": "sewa",
         "filled": 2480,
         "total": 2482,
@@ -611,7 +718,7 @@
       {
         "name": "SEWA_NS2",
         "label": "SEWA NS 2",
-        "type": "number",
+        "type": "integer",
         "group": "sewa",
         "filled": 2480,
         "total": 2482,
@@ -620,7 +727,7 @@
       {
         "name": "SEWA_NS3",
         "label": "SEWA NS 3",
-        "type": "number",
+        "type": "integer",
         "group": "sewa",
         "filled": 2480,
         "total": 2482,
@@ -629,7 +736,7 @@
       {
         "name": "SEWA_NS4",
         "label": "SEWA NS 4",
-        "type": "number",
+        "type": "integer",
         "group": "sewa",
         "filled": 2480,
         "total": 2482,
@@ -638,7 +745,7 @@
       {
         "name": "SEWA_NS5",
         "label": "SEWA NS 5",
-        "type": "number",
+        "type": "integer",
         "group": "sewa",
         "filled": 2480,
         "total": 2482,
@@ -647,7 +754,7 @@
       {
         "name": "SEWA_NS6",
         "label": "SEWA NS 6",
-        "type": "number",
+        "type": "integer",
         "group": "sewa",
         "filled": 2480,
         "total": 2482,
@@ -656,7 +763,7 @@
       {
         "name": "SEWA_NS7",
         "label": "SEWA NS 7",
-        "type": "number",
+        "type": "integer",
         "group": "sewa",
         "filled": 2480,
         "total": 2482,
@@ -665,74 +772,99 @@
       {
         "name": "PAGAR_NS1",
         "label": "Pagar NS 1",
-        "type": "number",
+        "type": "text",
         "group": "sewa",
         "filled": 2480,
         "total": 2482,
-        "options": null
+        "options": [
+          "LOLOS",
+          "MELAMPAUI"
+        ]
       },
       {
         "name": "PAGAR_NS2",
         "label": "Pagar NS 2",
-        "type": "number",
+        "type": "text",
         "group": "sewa",
         "filled": 2480,
         "total": 2482,
-        "options": null
+        "options": [
+          "LOLOS",
+          "MELAMPAUI"
+        ]
       },
       {
         "name": "PAGAR_NS3",
         "label": "Pagar NS 3",
-        "type": "number",
+        "type": "text",
         "group": "sewa",
         "filled": 2480,
         "total": 2482,
-        "options": null
+        "options": [
+          "LOLOS",
+          "MELAMPAUI"
+        ]
       },
       {
         "name": "PAGAR_NS4",
         "label": "Pagar NS 4",
-        "type": "number",
+        "type": "text",
         "group": "sewa",
         "filled": 2480,
         "total": 2482,
-        "options": null
+        "options": [
+          "LOLOS",
+          "MELAMPAUI"
+        ]
       },
       {
         "name": "PAGAR_NS5",
         "label": "Pagar NS 5",
-        "type": "number",
+        "type": "text",
         "group": "sewa",
         "filled": 2480,
         "total": 2482,
-        "options": null
+        "options": [
+          "LOLOS",
+          "MELAMPAUI"
+        ]
       },
       {
         "name": "PAGAR_NS6",
         "label": "Pagar NS 6",
-        "type": "number",
+        "type": "text",
         "group": "sewa",
         "filled": 2480,
         "total": 2482,
-        "options": null
+        "options": [
+          "LOLOS",
+          "MELAMPAUI"
+        ]
       },
       {
         "name": "PAGAR_NS7",
         "label": "Pagar NS 7",
-        "type": "number",
+        "type": "text",
         "group": "sewa",
         "filled": 2480,
         "total": 2482,
-        "options": null
+        "options": [
+          "LOLOS",
+          "MELAMPAUI"
+        ]
       },
       {
         "name": "SUKU_NS5",
         "label": "Suku pengikat NS 5",
-        "type": "number",
+        "type": "text",
         "group": "sewa",
         "filled": 2480,
         "total": 2482,
-        "options": null
+        "options": [
+          "DASAR",
+          "LANTAI",
+          "PAJAK"
+        ]
       },
       {
         "name": "TTL_NS5",
@@ -764,11 +896,15 @@
       {
         "name": "JNS_MEDIA2",
         "label": "Jenis media (dua jenis)",
-        "type": "number",
+        "type": "text",
         "group": "media",
         "filled": 2480,
         "total": 2482,
-        "options": null
+        "options": [
+          "Layar kecil - tinjau",
+          "Neon Box",
+          "Videotron"
+        ]
       },
       {
         "name": "JML_POV",
@@ -791,25 +927,43 @@
       {
         "name": "UKR_AKP",
         "label": "Ukuran usulan AKP (median)",
-        "type": "number",
+        "type": "text",
         "group": "media",
         "filled": 1563,
         "total": 2482,
-        "options": null
+        "options": [
+          "1 x 3 m",
+          "2 x 4 m",
+          "3 x 6 m",
+          "4 x 8 m",
+          "5 x 10 m",
+          "8 x 16 m",
+          "terikat struktur"
+        ]
       },
       {
         "name": "UKR_BPB",
         "label": "Ukuran BP Batam (POV maksimum)",
-        "type": "number",
+        "type": "text",
         "group": "media",
         "filled": 2480,
         "total": 2482,
-        "options": null
+        "options": [
+          "0",
+          "1 x 3 m",
+          "2 x 4 m",
+          "3 x 6 m",
+          "4 x 8 m",
+          "5 x 10 m",
+          "6 x 12 m",
+          "8 x 16 m",
+          "terikat struktur"
+        ]
       },
       {
         "name": "KEL_SIMP",
         "label": "Kelompok simpang 80 m atau jarak pandang terjauh",
-        "type": "number",
+        "type": "text",
         "group": "lokasi",
         "filled": 277,
         "total": 2482,
@@ -818,29 +972,47 @@
       {
         "name": "UKR_STUDI",
         "label": "Ukuran usulan studi (terbesar se-kelompok)",
-        "type": "number",
+        "type": "text",
         "group": "media",
         "filled": 2480,
         "total": 2482,
-        "options": null
+        "options": [
+          "0",
+          "1 x 3 m",
+          "2 x 4 m",
+          "3 x 6 m",
+          "4 x 8 m",
+          "5 x 10 m",
+          "6 x 12 m",
+          "8 x 16 m",
+          "terikat struktur"
+        ]
       },
       {
         "name": "PITA_ROW",
         "label": "Pita ROW (dari ROW terukur)",
-        "type": "number",
+        "type": "text",
         "group": "lokasi",
         "filled": 426,
         "total": 2482,
-        "options": null
+        "options": [
+          "ROW 20",
+          "ROW 30-50",
+          "ROW <= 15",
+          "ROW >= 70"
+        ]
       },
       {
         "name": "STAT_TTK",
         "label": "Status titik",
-        "type": "number",
+        "type": "text",
         "group": "identitas",
         "filled": 2482,
         "total": 2482,
-        "options": null
+        "options": [
+          "AKTIF",
+          "TIDAK DITARIFKAN"
+        ]
       },
       {
         "name": "TGI_DASAR",
@@ -863,29 +1035,47 @@
       {
         "name": "KWN_SHP",
         "label": "Kwn Shp",
-        "type": "number",
+        "type": "text",
         "group": "identitas",
         "filled": 2480,
         "total": 2482,
-        "options": null
+        "options": [
+          "BMD Pemko",
+          "BMD Pemprov",
+          "BP Batam"
+        ]
       },
       {
         "name": "UKR_XLS",
         "label": "Ukuran bidang (mentah)",
-        "type": "number",
+        "type": "text",
         "group": "media",
         "filled": 2480,
         "total": 2482,
-        "options": null
+        "options": [
+          "0",
+          "1 x 3 m",
+          "2 x 4 m",
+          "3 x 6 m",
+          "4 x 8 m",
+          "5 x 10 m",
+          "6 x 12 m",
+          "8 x 16 m",
+          "terikat struktur"
+        ]
       },
       {
         "name": "_STATUS_EDIT",
         "label": " Status Edit",
-        "type": "number",
+        "type": "text",
         "group": "lainnya",
         "filled": 2482,
         "total": 2482,
-        "options": null
+        "options": [
+          "base",
+          "mod",
+          "new"
+        ]
       },
       {
         "name": "POV_RERATA",
@@ -917,25 +1107,61 @@
       {
         "name": "PRIORITAS",
         "label": "Prioritas",
-        "type": "number",
+        "type": "text",
         "group": "skoring",
         "filled": 2373,
         "total": 2482,
-        "options": null
+        "options": [
+          "PRIORITAS 1",
+          "PRIORITAS 2",
+          "PRIORITAS 3"
+        ]
       },
       {
         "name": "KAT_LHR",
         "label": "Kat Lhr",
-        "type": "number",
+        "type": "text",
         "group": "skoring",
         "filled": 2373,
         "total": 2482,
-        "options": null
+        "options": [
+          "1",
+          "1.0",
+          "1.00453147758536",
+          "1.066",
+          "1.2939",
+          "1.5982",
+          "1.6266",
+          "1.6681",
+          "1.7768",
+          "1.77682472892053",
+          "1.8649",
+          "2.1193",
+          "2.2241",
+          "2.22414630199061",
+          "2.41058423693154",
+          "2.4106",
+          "2.4889",
+          "2.5103",
+          "2.7142",
+          "2.8398",
+          "3.1971",
+          "3.1984",
+          "3.2398",
+          "3.3531",
+          "3.4269",
+          "3.42692992393591",
+          "3.8173",
+          "4.1604",
+          "4.4193",
+          "5.0",
+          "Data Tidak Ada"
+        ]
       },
       {
         "name": "KAT_TIPE",
         "label": "Kat Tipe",
-        "type": "number",
+        "type": "integer",
         "group": "skoring",
         "filled": 2373,
         "total": 2482,
@@ -944,25 +1170,50 @@
       {
         "name": "POLA_RUANG",
         "label": "Pola Ruang",
-        "type": "number",
+        "type": "text",
         "group": "lokasi",
         "filled": 2379,
         "total": 2482,
-        "options": null
+        "options": [
+          "Badan Jalan",
+          "Campuran Intensitas Tinggi",
+          "Hutan Lindung",
+          "Jalur Hijau",
+          "Kawasan Peruntukan Industri",
+          "Pariwisata",
+          "Perdagangan dan Jasa Skala Kota",
+          "Perdagangan dan Jasa Skala SWP",
+          "Perdagangan dan Jasa Skala WP",
+          "Perkantoran",
+          "Perumahan Kepadatan Tinggi",
+          "SPU Skala Kecamatan",
+          "SPU Skala Kelurahan",
+          "SPU Skala Kota",
+          "Taman Kecamatan",
+          "Taman Kelurahan",
+          "Taman Kota",
+          "Transportasi"
+        ]
       },
       {
         "name": "ITBX",
         "label": "Itbx",
-        "type": "number",
+        "type": "text",
         "group": "lokasi",
         "filled": 2379,
         "total": 2482,
-        "options": null
+        "options": [
+          "B4",
+          "I",
+          "T1,2,3,B1",
+          "T1,T2,B1",
+          "X"
+        ]
       },
       {
         "name": "KAT_ITBX",
         "label": "Kat Itbx",
-        "type": "number",
+        "type": "integer",
         "group": "lokasi",
         "filled": 2379,
         "total": 2482,
@@ -989,11 +1240,16 @@
       {
         "name": "SLOPE",
         "label": "Slope",
-        "type": "number",
+        "type": "text",
         "group": "lokasi",
         "filled": 2379,
         "total": 2482,
-        "options": null
+        "options": [
+          "Curam (25-40%)",
+          "Datar (0-8%)",
+          "Landai (8-15%)",
+          "Sedang (15-25%)"
+        ]
       },
       {
         "name": "SKOR_FINAL",
@@ -1079,7 +1335,7 @@
       {
         "name": "TARIF_7B",
         "label": "Tarif 7B",
-        "type": "number",
+        "type": "integer",
         "group": "tarif",
         "filled": 1555,
         "total": 2482,
@@ -1088,7 +1344,7 @@
       {
         "name": "TARIF_7C",
         "label": "Tarif 7C",
-        "type": "number",
+        "type": "integer",
         "group": "tarif",
         "filled": 1555,
         "total": 2482,
@@ -1115,7 +1371,7 @@
       {
         "name": "REKLAME_BA",
         "label": "Reklame Ba",
-        "type": "number",
+        "type": "integer",
         "group": "lainnya",
         "filled": 485,
         "total": 2482,
@@ -1124,7 +1380,7 @@
       {
         "name": "REKLAME__1",
         "label": "Reklame  1",
-        "type": "number",
+        "type": "text",
         "group": "lainnya",
         "filled": 485,
         "total": 2482,
@@ -1142,38 +1398,60 @@
       {
         "name": "REKLAME__3",
         "label": "Reklame  3",
-        "type": "number",
+        "type": "text",
         "group": "lainnya",
         "filled": 485,
         "total": 2482,
-        "options": null
+        "options": [
+          "30 sampai 60 m",
+          "di atas 60 m",
+          "di bawah 30 m"
+        ]
       },
       {
         "name": "REKLAME__4",
         "label": "Reklame  4",
-        "type": "number",
+        "type": "text",
         "group": "lainnya",
         "filled": 485,
         "total": 2482,
-        "options": null
+        "options": [
+          "KORIDOR_TEGAK_LURUS",
+          "LEBAR_PL_PITA",
+          "MEDIAN_ANTAR_TITIK",
+          "MEDIAN_JALAN",
+          "PENAMPANG_TERDEKAT",
+          "SAPUAN",
+          "TEGAK_LURUS_DI_TITIK_JALAN_SAMA",
+          "TEGAK_LURUS_DI_TITIK_JALAN_TERDEKAT",
+          "TEGAK_LURUS_JALAN_SAMA",
+          "TEGAK_LURUS_JALAN_TERDEKAT"
+        ]
       },
       {
         "name": "REKLAME__5",
         "label": "Reklame  5",
-        "type": "number",
+        "type": "text",
         "group": "lainnya",
         "filled": 485,
         "total": 2482,
-        "options": null
+        "options": [
+          "nilai dipinjam",
+          "terukur di titik"
+        ]
       },
       {
         "name": "REKLAME__6",
         "label": "Reklame  6",
-        "type": "number",
+        "type": "text",
         "group": "lainnya",
         "filled": 485,
         "total": 2482,
-        "options": null
+        "options": [
+          "KORIDOR_TIDAK_TERTUTUP",
+          "OK",
+          "TIDAK_ADA_KORIDOR"
+        ]
       },
       {
         "name": "CPM_NS1",
@@ -1304,65 +1582,93 @@
       {
         "name": "STAT_NS1",
         "label": "Status NS 1",
-        "type": "number",
+        "type": "text",
         "group": "sewa",
         "filled": 2372,
         "total": 2482,
-        "options": null
+        "options": [
+          "AMAN",
+          "KETAT",
+          "TIDAK TERJANGKAU"
+        ]
       },
       {
         "name": "STAT_NS2",
         "label": "Status NS 2",
-        "type": "number",
+        "type": "text",
         "group": "sewa",
         "filled": 2372,
         "total": 2482,
-        "options": null
+        "options": [
+          "AMAN",
+          "KETAT",
+          "TIDAK TERJANGKAU"
+        ]
       },
       {
         "name": "STAT_NS3",
         "label": "Status NS 3",
-        "type": "number",
+        "type": "text",
         "group": "sewa",
         "filled": 2372,
         "total": 2482,
-        "options": null
+        "options": [
+          "AMAN",
+          "KETAT",
+          "TIDAK TERJANGKAU"
+        ]
       },
       {
         "name": "STAT_NS4",
         "label": "Status NS 4",
-        "type": "number",
+        "type": "text",
         "group": "sewa",
         "filled": 2372,
         "total": 2482,
-        "options": null
+        "options": [
+          "AMAN",
+          "KETAT",
+          "TIDAK TERJANGKAU"
+        ]
       },
       {
         "name": "STAT_NS5",
         "label": "Status NS 5",
-        "type": "number",
+        "type": "text",
         "group": "sewa",
         "filled": 2372,
         "total": 2482,
-        "options": null
+        "options": [
+          "AMAN",
+          "KETAT",
+          "TIDAK TERJANGKAU"
+        ]
       },
       {
         "name": "STAT_NS6",
         "label": "Status NS 6",
-        "type": "number",
+        "type": "text",
         "group": "sewa",
         "filled": 2372,
         "total": 2482,
-        "options": null
+        "options": [
+          "AMAN",
+          "KETAT",
+          "TIDAK TERJANGKAU"
+        ]
       },
       {
         "name": "STAT_NS7",
         "label": "Status NS 7",
-        "type": "number",
+        "type": "text",
         "group": "sewa",
         "filled": 2372,
         "total": 2482,
-        "options": null
+        "options": [
+          "AMAN",
+          "KETAT",
+          "TIDAK TERJANGKAU"
+        ]
       },
       {
         "name": "KLNGGR_NS5",
@@ -1376,29 +1682,43 @@
       {
         "name": "TINJAU_GIS",
         "label": "Tinjau GIS (rerata/median > 1,25)",
-        "type": "number",
+        "type": "text",
         "group": "skoring",
         "filled": 270,
         "total": 2482,
-        "options": null
+        "options": [
+          "TINJAU GIS"
+        ]
       },
       {
         "name": "UKR_KORID",
         "label": "Ukuran koridor menurut pita ROW",
-        "type": "number",
+        "type": "text",
         "group": "media",
         "filled": 416,
         "total": 2482,
-        "options": null
+        "options": [
+          "2 x 4 m",
+          "3 x 6 m",
+          "4 x 8 m",
+          "5 x 10 m"
+        ]
       },
       {
         "name": "UKR_SK226",
         "label": "Ukuran ruas bernama SK 226/2022",
-        "type": "number",
+        "type": "text",
         "group": "media",
         "filled": 936,
         "total": 2482,
-        "options": null
+        "options": [
+          "4x6",
+          "4x6 / 4x8",
+          "4x6 / 5x10",
+          "4x8",
+          "5x10",
+          "5x10 / 4x8"
+        ]
       },
       {
         "name": "NJOP_0902",
@@ -1412,7 +1732,7 @@
       {
         "name": "RUAS_ZNT",
         "label": "Jumlah ruas ZNT tersanding",
-        "type": "number",
+        "type": "integer",
         "group": "tarif",
         "filled": 1549,
         "total": 2482,
@@ -1421,7 +1741,7 @@
       {
         "name": "REKLAME__7",
         "label": "Reklame  7",
-        "type": "number",
+        "type": "text",
         "group": "lainnya",
         "filled": 237,
         "total": 2482,
@@ -1430,16 +1750,19 @@
       {
         "name": "_DIUBAH_OLEH",
         "label": " Diubah Oleh",
-        "type": "number",
+        "type": "text",
         "group": "lainnya",
         "filled": 6,
         "total": 2482,
-        "options": null
+        "options": [
+          "Fitrah Ramadhan",
+          "anonim"
+        ]
       },
       {
         "name": "_DIUBAH_PADA",
         "label": " Diubah Pada",
-        "type": "number",
+        "type": "text",
         "group": "lainnya",
         "filled": 6,
         "total": 2482,
@@ -1454,7 +1777,7 @@
       {
         "name": "fid",
         "label": "Fid",
-        "type": "number",
+        "type": "integer",
         "group": "identitas",
         "filled": 770,
         "total": 910,
@@ -1463,7 +1786,7 @@
       {
         "name": "ID_POV",
         "label": "Id Pov",
-        "type": "number",
+        "type": "text",
         "group": "identitas",
         "filled": 910,
         "total": 910,
@@ -1472,7 +1795,7 @@
       {
         "name": "ID_TITIK",
         "label": "ID Titik",
-        "type": "number",
+        "type": "text",
         "group": "identitas",
         "filled": 892,
         "total": 910,
@@ -1481,7 +1804,7 @@
       {
         "name": "UID",
         "label": "Uid",
-        "type": "number",
+        "type": "text",
         "group": "identitas",
         "filled": 892,
         "total": 910,
@@ -1490,7 +1813,7 @@
       {
         "name": "ID_WEBGIS",
         "label": "Id Webgis",
-        "type": "number",
+        "type": "text",
         "group": "identitas",
         "filled": 910,
         "total": 910,
@@ -1499,7 +1822,7 @@
       {
         "name": "POV_KE",
         "label": "Pov Ke",
-        "type": "number",
+        "type": "integer",
         "group": "identitas",
         "filled": 910,
         "total": 910,
@@ -1535,11 +1858,15 @@
       {
         "name": "STATUS_POV",
         "label": "Status Pov",
-        "type": "number",
+        "type": "text",
         "group": "identitas",
         "filled": 910,
         "total": 910,
-        "options": null
+        "options": [
+          "asli",
+          "baru",
+          "ubah"
+        ]
       },
       {
         "name": "JML_POV",
@@ -1589,25 +1916,36 @@
       {
         "name": "TIPE",
         "label": "Tipe",
-        "type": "number",
+        "type": "text",
         "group": "lokasi",
         "filled": 907,
         "total": 910,
-        "options": null
+        "options": [
+          "Bersinyal (ATCS + OSM)",
+          "Bersinyal (ATCS)",
+          "Bersinyal (OSM)",
+          "Billboard",
+          "Simpang Bersinyal",
+          "Simpang Tak Bersinyal",
+          "Tidak Bersinyal",
+          "Videotron"
+        ]
       },
       {
         "name": "JENIS",
         "label": "Jenis",
-        "type": "number",
+        "type": "text",
         "group": "lokasi",
         "filled": 907,
         "total": 910,
-        "options": null
+        "options": [
+          "Persimpangan"
+        ]
       },
       {
         "name": "NAMA_JALAN",
         "label": "Nama jalan",
-        "type": "number",
+        "type": "text",
         "group": "lokasi",
         "filled": 910,
         "total": 910,
@@ -1616,7 +1954,7 @@
       {
         "name": "KELURAHAN",
         "label": "Kelurahan",
-        "type": "number",
+        "type": "text",
         "group": "lokasi",
         "filled": 910,
         "total": 910,
@@ -1625,34 +1963,61 @@
       {
         "name": "KECAMATAN",
         "label": "Kecamatan",
-        "type": "number",
+        "type": "text",
         "group": "lokasi",
         "filled": 910,
         "total": 910,
-        "options": null
+        "options": [
+          "BATAM KOTA",
+          "BATU AJI",
+          "BATU AMPAR",
+          "BENGKONG",
+          "LUBUK BAJA",
+          "NONGSA",
+          "SAGULUNG",
+          "SEI BEDUK",
+          "SEKUPANG"
+        ]
       },
       {
         "name": "PRIORITAS",
         "label": "Prioritas",
-        "type": "number",
+        "type": "text",
         "group": "skoring",
         "filled": 770,
         "total": 910,
-        "options": null
+        "options": [
+          "PRIORITAS 1",
+          "PRIORITAS 2",
+          "PRIORITAS 3",
+          "TANPA PRIORITAS"
+        ]
       },
       {
         "name": "SURVEYOR",
         "label": "Surveyor",
-        "type": "number",
+        "type": "text",
         "group": "identitas",
         "filled": 904,
         "total": 910,
-        "options": null
+        "options": [
+          "",
+          "BUDI",
+          "Budi",
+          "Faiq",
+          "Fitrah Ramadhan",
+          "Resa",
+          "Rikrik",
+          "Sutani",
+          "afri",
+          "paiq",
+          "wahyu"
+        ]
       },
       {
         "name": "WAKTU",
         "label": "Waktu",
-        "type": "number",
+        "type": "text",
         "group": "identitas",
         "filled": 904,
         "total": 910,
@@ -1661,11 +2026,16 @@
       {
         "name": "CARA_COCOK",
         "label": "Cara Cocok",
-        "type": "number",
+        "type": "text",
         "group": "identitas",
         "filled": 910,
         "total": 910,
-        "options": null
+        "options": [
+          "ID",
+          "TIDAK COCOK",
+          "WebGIS",
+          "koordinat"
+        ]
       },
       {
         "name": "JARAK_COCOK_M",

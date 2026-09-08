@@ -29,6 +29,25 @@ from gpkg_to_geojson import baca_kamus, bangun_skema, GRUP, GRUP_LAIN, SRC_KAMUS
 KOL_RK = ["JML_POV", "POV_RERATA", "POV_MEDIAN", "POV_MAKS", "POV_MIN"]
 KOL_PV = ["JML_POV", "POV_MEAN", "POV_MEDIAN", "POV_MAKS", "POV_MIN"]
 
+# Dipakai hanya sebagai rujukan tipe kolom saat menyusun schema.json.
+SRC_GPKG_RK = r"C:\Users\USER\Downloads\20260908 - Titik Reklame Revisi Manual (ID baru).gpkg"
+SRC_GPKG_PV = r"C:\Users\USER\Downloads\Titik_POV_Reklame_Batam\Titik_POV_Reklame_Batam.gpkg"
+
+
+def tipe_asli(path):
+    """{nama kolom: tipe SQLite} dari tabel fitur sebuah GeoPackage."""
+    import sqlite3
+    if not os.path.exists(path):
+        return {}
+    con = sqlite3.connect(path)
+    try:
+        tabel = con.execute("SELECT table_name FROM gpkg_contents "
+                            "WHERE data_type='features'").fetchone()[0]
+        return {r[1]: (r[2] or "TEXT").upper()
+                for r in con.execute('PRAGMA table_info("%s")' % tabel)}
+    finally:
+        con.close()
+
 
 def jarak(lon1, lat1, lon2, lat2):
     R = 6371008.8
@@ -179,17 +198,40 @@ def main():
 
     kamus = baca_kamus(SRC_KAMUS)
     kamus.setdefault("POV_MEDIAN", "POV median GIS (m)")
-    kolom = lambda feats: [(c, "REAL" if c not in ("JML_POV",) else "INTEGER")
-                           for c in OrderedDict.fromkeys(
-                               k for f in feats for k in f["props"])]
+
+    def kolom(feats, asli):
+        """
+        Tipe tiap kolom mengikuti deklarasi GeoPackage sumber; hanya kolom
+        yang tidak ada di sana yang disimpulkan dari isinya. Menebak asal-asalan
+        di sini berakibat fatal: kolom teks yang dianggap angka membuat
+        formulir WebGIS menolak isian dan menghapus daftar pilihannya.
+        """
+        urut = OrderedDict.fromkeys(k for f in feats for k in f["props"])
+        out = []
+        for c in urut:
+            if c in asli:
+                out.append((c, asli[c]))
+                continue
+            nilai = [f["props"][c] for f in feats if f["props"].get(c) is not None]
+            if nilai and all(isinstance(v, int) and not isinstance(v, bool) for v in nilai):
+                out.append((c, "INTEGER"))
+            elif nilai and all(isinstance(v, (int, float)) and not isinstance(v, bool)
+                               for v in nilai):
+                out.append((c, "REAL"))
+            else:
+                out.append((c, "TEXT"))
+        return out
+    asli_rk = tipe_asli(SRC_GPKG_RK)
+    asli_rk.setdefault("POV_MEDIAN", "REAL")
+    asli_pv = tipe_asli(SRC_GPKG_PV)
     skema = {
         "generated": "tools/hitung_pov.py",
         "groups": OrderedDict([(k, l) for k, l, _ in GRUP] + [GRUP_LAIN]),
         "reklame": {"idField": "ID_TITIK",
-                    "fields": bangun_skema(kolom(RK.values()),
+                    "fields": bangun_skema(kolom(RK.values(), asli_rk),
                                            [{"properties": v["props"]} for v in RK.values()], kamus)},
         "pov": {"idField": "ID_POV", "parentField": "ID_TITIK",
-                "fields": bangun_skema(kolom(PV.values()),
+                "fields": bangun_skema(kolom(PV.values(), asli_pv),
                                        [{"properties": v["props"]} for v in PV.values()], kamus)},
     }
     tulis(os.path.join(DATA, "schema.json"), skema, pretty=True)
