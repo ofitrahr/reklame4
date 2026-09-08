@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T01:02:56.683Z",
+ "updated": "2026-09-08T01:05:08.944Z",
  "reklame": {
   "ANL-LBJ-BUN-SIM-001": {
    "op": "delete",
@@ -155,6 +155,14 @@
    },
    "by": "anonim",
    "at": "2026-09-08T01:02:52.666Z"
+  },
+  "ANL-SKP-SK1-SIM-004": {
+   "op": "update",
+   "props": {
+    "JML_POV": 3
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:05:03.247Z"
   }
  },
  "pov": {
@@ -619,6 +627,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T01:02:52.666Z"
+  },
+  "NEW-P-85gielwefi": {
+   "op": "create",
+   "_pkey": "ANL-SKP-SK1-SIM-004",
+   "geom": [
+    103.94164637,
+    1.1092776
+   ],
+   "props": {
+    "ID_POV": "ANL-SKP-SK1-SIM-004-POV-03",
+    "ID_TITIK": "ANL-SKP-SK1-SIM-004",
+    "UID": "UID-2300",
+    "ID_WEBGIS": "ANL-SKP-SK1-SIM-004",
+    "POV_KE": 3,
+    "LON": 103.94164637,
+    "LAT": 1.1092776,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T01:05:03.247Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Kawasan Industri Sekupang",
+    "KELURAHAN": "TANJUNG PINGGIR",
+    "KECAMATAN": "SEKUPANG",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 11.1
+   },
+   "by": "anonim",
+   "at": "2026-09-08T01:05:03.247Z"
   }
  }
 }
