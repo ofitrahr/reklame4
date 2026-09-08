@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-09-08T02:43:20.082Z",
+ "updated": "2026-09-08T02:43:43.183Z",
  "reklame": {
   "PWK-BTK-H01-SIM-001": {
    "op": "update",
@@ -247,6 +247,14 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:43:14.201Z"
+  },
+  "ANL-LBJ-UFC-SIM-002": {
+   "op": "update",
+   "props": {
+    "JML_POV": 1
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:43:37.467Z"
   }
  },
  "pov": {
@@ -2090,6 +2098,35 @@
    },
    "by": "anonim",
    "at": "2026-09-08T02:43:14.201Z"
+  },
+  "NEW-P-cg9nkrf5vf": {
+   "op": "create",
+   "_pkey": "ANL-LBJ-UFC-SIM-002",
+   "geom": [
+    104.00171098,
+    1.13756704
+   ],
+   "props": {
+    "ID_POV": "ANL-LBJ-UFC-SIM-002-POV-01",
+    "ID_TITIK": "ANL-LBJ-UFC-SIM-002",
+    "UID": "UID-2503",
+    "ID_WEBGIS": "ANL-LBJ-UFC-SIM-002",
+    "POV_KE": 1,
+    "LON": 104.00171098,
+    "LAT": 1.13756704,
+    "STATUS_POV": "baru",
+    "SURVEYOR": "",
+    "WAKTU": "2026-09-08T02:43:37.467Z",
+    "CARA_COCOK": "WebGIS",
+    "NAMA_JALAN": "Jl. Utama Food Court - Tos 3000",
+    "KELURAHAN": "BATU SELICIN",
+    "KECAMATAN": "LUBUK BAJA",
+    "JENIS": "Persimpangan",
+    "TIPE": "Simpang Tak Bersinyal",
+    "JARAK_M": 22.9
+   },
+   "by": "anonim",
+   "at": "2026-09-08T02:43:37.467Z"
   }
  }
 }
