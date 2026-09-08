@@ -36,6 +36,7 @@ TEKNIS = [
     ("MNMPL_STR", "Bentuk (menempel struktur)"),
     ("JML_MUKA", "Jumlah Muka"),
     ("NAMA_JALAN", "Nama Jalan"),
+    ("KELAS_JLN", "Kelas Jalan"),
     ("KELURAHAN", "Kelurahan"),
     ("KECAMATAN", "Kecamatan"),
     ("STATUS_WPP", "Sub Wilayah SK 321"),
@@ -65,14 +66,14 @@ def rupiah(v):
 
 
 # ------------------------------------------------------------------ shapefile
-def buat_shp(feats):
+def buat_shp(feats, awalan):
     kolom = [k for k, _j in TEKNIS] + [k for k, _j in SEWA]
     panjang = [k for k in kolom if len(k) > 10]
     if panjang:
         raise SystemExit("Nama kolom melebihi 10 huruf: %s" % panjang)
 
     tmp = os.path.join(KELUAR, "_shp_sumber.geojson")
-    out_dir = os.path.join(KELUAR, "SHP_Titik_Reklame_Batam")
+    out_dir = os.path.join(KELUAR, "%s_SHP" % awalan)
     shutil.rmtree(out_dir, ignore_errors=True)
     os.makedirs(out_dir, exist_ok=True)
 
@@ -83,9 +84,9 @@ def buat_shp(feats):
     with open(tmp, "w", encoding="utf-8") as fh:
         json.dump(ringkas, fh, ensure_ascii=False)
 
-    shp = os.path.join(out_dir, "Titik_Reklame_Batam.shp")
+    shp = os.path.join(out_dir, "%s_CLIENT.shp" % awalan)
     cmd = [OGR2OGR, "-f", "ESRI Shapefile", shp, tmp,
-           "-nln", "Titik_Reklame_Batam", "-a_srs", "EPSG:4326",
+           "-nln", "TITIK_REKLAME", "-a_srs", "EPSG:4326",
            "-lco", "ENCODING=UTF-8"]
     # Instalasi PostgreSQL/PostGIS di komputer ini memasang PROJ_LIB ke pustaka
     # PROJ versi lama, yang membuat ogr2ogr QGIS menolak definisi EPSG. Arahkan
@@ -115,7 +116,7 @@ def kelas(nilai, batas):
     return len(batas)
 
 
-def buat_kmz(feats, kunci, judul):
+def buat_kmz(feats, kunci, judul, awalan):
     isi = [f["properties"].get(kunci) for f in feats]
     positif = sorted(v for v in isi if v)
     # lima kelas berdasarkan kuantil dari titik yang bernilai
@@ -178,7 +179,7 @@ def buat_kmz(feats, kunci, judul):
         baris.append("</Folder>")
     baris.append("</Document></kml>")
 
-    nama = "Reklame_Batam_%s.kmz" % kunci.replace("SEWA_", "")
+    nama = "%s_%s.kmz" % (awalan, kunci.replace("SEWA_", ""))
     jalur = os.path.join(KELUAR, "KMZ", nama)
     os.makedirs(os.path.dirname(jalur), exist_ok=True)
     with zipfile.ZipFile(jalur, "w", zipfile.ZIP_DEFLATED) as z:
@@ -189,16 +190,93 @@ def buat_kmz(feats, kunci, judul):
     return jalur
 
 
+# ------------------------------------------------------------------ excel
+def buat_xlsx(feats, nama):
+    """Lembar kerja dengan susunan kolom yang sama seperti Shapefile."""
+    from openpyxl import Workbook
+    from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
+    from openpyxl.utils import get_column_letter
+    from datetime import datetime
+
+    kolom = TEKNIS + SEWA
+    lebar = {"ID_TITIK": 24, "NAMA_JALAN": 38, "STATUS_WPP": 26, "KELURAHAN": 20,
+             "TIPE": 22, "KEWENANGAN": 17, "MNMPL_STR": 24}
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "Titik Reklame"
+    kf = Font(name="Arial", size=10, bold=True, color="FFFFFF")
+    ki = PatternFill("solid", fgColor="1F4E79")
+    gs = Side(style="thin", color="BFBFBF")
+    tepi = Border(left=gs, right=gs, top=gs, bottom=gs)
+    isi_font = Font(name="Arial", size=10)
+
+    for i, (k, j) in enumerate(kolom, start=1):
+        c = ws.cell(row=1, column=i, value=j)
+        c.font, c.fill, c.border = kf, ki, tepi
+        c.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
+        ws.column_dimensions[get_column_letter(i)].width = lebar.get(k, 15)
+    ws.row_dimensions[1].height = 30
+
+    for r, f in enumerate(feats, start=2):
+        p = f["properties"]
+        for i, (k, _j) in enumerate(kolom, start=1):
+            c = ws.cell(row=r, column=i, value=p.get(k))
+            c.font, c.border = isi_font, tepi
+            if k in ("POV_MEDIAN", "ROW_JALAN"):
+                c.number_format = "0.0"
+                c.alignment = Alignment(horizontal="right")
+            elif k.startswith("SEWA_") or k == "JML_MUKA":
+                c.number_format = "#,##0"
+                c.alignment = Alignment(horizontal="right")
+    ws.freeze_panes = "C2"
+    ws.auto_filter.ref = "A1:%s%d" % (get_column_letter(len(kolom)), len(feats) + 1)
+
+    k = wb.create_sheet("Keterangan")
+    k.column_dimensions["A"].width = 26
+    k.column_dimensions["B"].width = 96
+    k.cell(row=1, column=1, value="Keterangan Berkas").font = Font(name="Arial", size=12, bold=True)
+    isi = [("Berkas", "Titik reklame Kota Batam - susunan kolom permintaan pemberi kerja"),
+           ("Jumlah titik", len(feats)),
+           ("Dibuat", datetime.now().strftime("%d %B %Y, %H:%M")),
+           ("Sistem koordinat", "WGS 84 (EPSG:4326) - lihat berkas SHP/GPKG untuk geometrinya"),
+           ("", ""),
+           ("Bentuk", "Diambil dari kolom MNMPL_STR, yaitu apakah reklame menempel pada "
+                      "struktur bangunan atau berdiri sendiri."),
+           ("Dimensi Ukuran", "Ukuran bidang yang dipakai dalam perhitungan tarif NS A-D."),
+           ("POV Median", "Nilai tengah jarak titik POV ke reklame, dalam meter. Kosong "
+                          "berarti titik itu belum memiliki titik POV."),
+           ("ROW Jalan", "Lebar ruang milik jalan hasil pengukuran tim GIS. Hanya diukur "
+                         "untuk titik koridor sisi jalan."),
+           ("Sewa NS A - NS D", "Rupiah per tahun. Nilai 0 berarti titik tidak ditarifkan "
+                                "pada susunan tersebut; sel kosong berarti tidak dihitung.")]
+    for i, (a, b) in enumerate(isi, start=3):
+        ca = k.cell(row=i, column=1, value=a)
+        ca.font = Font(name="Arial", size=10, bold=True)
+        ca.alignment = Alignment(vertical="top")
+        cb = k.cell(row=i, column=2, value=b)
+        cb.font = Font(name="Arial", size=10)
+        cb.alignment = Alignment(vertical="top", wrap_text=True)
+
+    jalur = os.path.join(KELUAR, nama)
+    wb.save(jalur)
+    print("Excel     -> %s  (%d baris x %d kolom, %.2f MB)"
+          % (nama, len(feats), len(kolom), os.path.getsize(jalur) / 1e6))
+    return jalur
+
+
 def main():
+    awalan = sys.argv[1] if len(sys.argv) > 1 else "Reklame_Batam"
     os.makedirs(KELUAR, exist_ok=True)
     feats = muat()
     print("data: %d titik" % len(feats))
     print()
-    buat_shp(feats)
+    buat_shp(feats, awalan)
+    print()
+    buat_xlsx(feats, "%s_CLIENT.xlsx" % awalan)
     print()
     print("KMZ -> %s" % os.path.join(KELUAR, "KMZ"))
     for kunci, judul in SEWA:
-        buat_kmz(feats, kunci, judul)
+        buat_kmz(feats, kunci, judul, awalan)
 
 
 if __name__ == "__main__":
